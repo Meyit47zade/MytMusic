@@ -21,7 +21,7 @@ call_5 : "**Asistan Sohbetinize Katılacak ... Lütfen Bekleyin !**"
 call_6 : "**Asistan [ {0} ] Başarıyla Katıldı.\n\nMüzik Şimdi Başlatılıyor .**"
 call_7 : "**Zararlı Yönetici Hakkı Verildi **\n\nLütfen ** KULLANICILARI YASAK** haklarını bottan kaldırın."
 call_8 : "**Zararlı Yönetici Hakkı Verildi **\n\nLütfen bottan **YENİ YÖNETİCİLER EKLE** haklarını kaldırın."
-call_9 : "**Yayın Değiştirilemedi**\nParçayı tekrar değiştirmek için /atla butonunu kullanın."
+call_9 : "**Parça Değiştirilemedi .\n└ Atlamak için /atla yazın .**"
 call_10 : "Oynatma Listesinden Sonraki Parçayı İndirme"
 call_11 : "Lütfen kanalınıza @{0} ekleyin[ ID: {1}].\n\nBot, kanal ayrıntılarını alamıyor."
 
