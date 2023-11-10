@@ -20,9 +20,7 @@ selections = [
 ]
 
 close_key = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(
-          text=_["CLOSE_BUTTON"],
-          callback_data="close")]]
+    [[InlineKeyboardButton(text="🗑 ᴋᴀᴘᴀᴛ", callback_data="close")]]
 )
 
 ## After Edits with Timer Bar
