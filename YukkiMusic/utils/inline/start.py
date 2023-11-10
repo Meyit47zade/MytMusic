@@ -132,8 +132,8 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text=_["S_B_7"], url=f"tg://openmessage?user_id={OWNERS}"
+                        text=_["S_B_7"], user_id=OWNER
                     ),
                 ]
-            )
+        )
     return buttons
