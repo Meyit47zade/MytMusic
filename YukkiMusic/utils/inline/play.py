@@ -1,15 +1,6 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import random
 
-from config import OWNER_ID
+from config import OWNER_ID, OWNERS, KANAL
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -29,7 +20,9 @@ selections = [
 ]
 
 close_key = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="🗑 ᴋᴀᴘᴀᴛ", callback_data="close")]]
+    [[InlineKeyboardButton(
+          text=_["CLOSE_BUTTON"],
+          callback_data="close")]]
 )
 
 ## After Edits with Timer Bar
@@ -81,7 +74,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                "✦  𝖮𝗐𝗇𝖾𝗋", url=f"tg://openmessage?user_id=6811941116"
+                text=_["S_B_7"], url=f"tg://openmessage?user_id={OWNERS}"
             ),
         ],
         [
@@ -136,11 +129,11 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                "✦  𝖪𝖺𝗇𝖺𝗅", url="https://t.me/AikoCall"
+                text=_["S_B_4"], url=f"https://t.me/{KANAL}"
             ),
             InlineKeyboardButton(
-                "✦  𝖮𝗐𝗇𝖾𝗋", url=f"tg://openmessage?user_id=6811941116"
-            ),
+                text=_["S_B_7"], url=f"tg://openmessage?user_id={OWNERS}"
+            )
         ],
         [
             InlineKeyboardButton(
@@ -200,7 +193,7 @@ def stream_markup(_, videoid, chat_id):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                "✦  𝖮𝗐𝗇𝖾𝗋", url=f"tg://openmessage?user_id=6811941116"
+                text=_["S_B_7"], url=f"tg://openmessage?user_id={OWNERS}"
             ),
         ],
         [
@@ -254,11 +247,11 @@ def telegram_markup(_, chat_id):
         ],
         [
             InlineKeyboardButton(
-                "✦  𝖪𝖺𝗇𝖺𝗅", url="https://t.me/AikoCall"
+                text=_["S_B_4"], url=f"https://t.me/{KANAL}"
             ),
             InlineKeyboardButton(
-                "✦  𝖮𝗐𝗇𝖾𝗋", url=f"tg://openmessage?user_id=6811941116"
-            ),
+                text=_["S_B_7"], url=f"tg://openmessage?user_id={OWNERS}"
+            )
         ],
         [
             InlineKeyboardButton(
