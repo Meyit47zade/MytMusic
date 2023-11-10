@@ -31,7 +31,7 @@ def start_pannel(_):
                 text=_["S_B_4"], url=f"https://t.me/{KANAL}"
             ),
             InlineKeyboardButton(
-                text=_["S_B_7"], url=f"tg://openmessage?user_id={OWNER_ID}"
+                text=_["S_B_7"], user_id=OWNER_ID
             )
         ],
     ]
