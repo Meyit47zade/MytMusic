@@ -19,20 +19,16 @@ from YukkiMusic.utils.decorators import (ActualAdminCB, language,
                                          languageCB)
 
 # Languages Available
+# Languages Available
 
 
 def lanuages_keyboard(_):
-    keyboard = InlineKeyboard(row_width=3)
-    keyboard.add(
-        *[
-            (
-                InlineKeyboardButton(
-                    text=languages_present[i],
-                    callback_data=f"languages:{i}",
-                )
-            )
-            for i in languages_present
-        ]
+    keyboard = InlineKeyboard(row_width=2)
+    keyboard.row(
+        InlineKeyboardButton(
+            text="🇹🇷 Türkçe",
+            callback_data=f"languages:en",
+        ),
     )
     keyboard.row(
         InlineKeyboardButton(
@@ -86,16 +82,16 @@ async def language_markup(client, CallbackQuery, _):
     old = await get_lang(CallbackQuery.message.chat.id)
     if str(old) == str(langauge):
         return await CallbackQuery.answer(
-            "You're already on same language", show_alert=True
+            "Zaten aynı dildesiniz", show_alert=True
         )
     try:
         _ = get_string(langauge)
         await CallbackQuery.answer(
-            "Successfully changed your language.", show_alert=True
+            "Dilinizi başarıyla değiştirdiniz.", show_alert=True
         )
     except:
         return await CallbackQuery.answer(
-            "Failed to change language or Language under update.",
+            "Dil veya güncelleme altındaki Dil değiştirilemedi.",
             show_alert=True,
         )
     await set_lang(CallbackQuery.message.chat.id, langauge)

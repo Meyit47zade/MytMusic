@@ -196,8 +196,7 @@ async def play_commnd(
                     plist_id = (url.split("=")[1]).split("&")[0]
                 else:
                     plist_id = url.split("=")[1]
-                img = config.PLAYLIST_IMG_URL
-                cap = _["play_10"]
+                _["play_10"]
             else:
                 try:
                     details, track_id = await YouTube.track(url)
@@ -205,8 +204,7 @@ async def play_commnd(
                     print(e)
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
-                img = details["thumb"]
-                cap = _["play_11"].format(
+                _["play_11"].format(
                     details["title"],
                     details["duration_min"],
                 )
@@ -225,8 +223,7 @@ async def play_commnd(
                 except Exception:
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
-                img = details["thumb"]
-                cap = _["play_11"].format(
+                _["play_11"].format(
                     details["title"], details["duration_min"]
                 )
             elif "playlist" in url:
@@ -236,8 +233,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "playlist"
                 plist_type = "spplay"
-                img = config.SPOTIFY_PLAYLIST_IMG_URL
-                cap = _["play_12"].format(
+                _["play_12"].format(
                     message.from_user.first_name
                 )
             elif "album" in url:
@@ -247,8 +243,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "playlist"
                 plist_type = "spalbum"
-                img = config.SPOTIFY_ALBUM_IMG_URL
-                cap = _["play_12"].format(
+                _["play_12"].format(
                     message.from_user.first_name
                 )
             elif "artist" in url:
@@ -258,8 +253,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "playlist"
                 plist_type = "spartist"
-                img = config.SPOTIFY_ARTIST_IMG_URL
-                cap = _["play_12"].format(
+                _["play_12"].format(
                     message.from_user.first_name
                 )
             else:
@@ -271,8 +265,7 @@ async def play_commnd(
                 except Exception:
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
-                img = details["thumb"]
-                cap = _["play_11"].format(
+                _["play_11"].format(
                     details["title"], details["duration_min"]
                 )
             elif "playlist" in url:
@@ -283,7 +276,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "playlist"
                 plist_type = "apple"
-                cap = _["play_13"].format(
+                _["play_13"].format(
                     message.from_user.first_name
                 )
                 img = url
@@ -295,8 +288,7 @@ async def play_commnd(
             except Exception as e:
                 return await mystic.edit_text(_["play_3"])
             streamtype = "youtube"
-            img = details["thumb"]
-            cap = _["play_11"].format(
+            _["play_11"].format(
                 details["title"], details["duration_min"]
             )
         elif await SoundCloud.valid(url):
@@ -456,8 +448,7 @@ async def play_commnd(
                 "f" if fplay else "d",
             )
             await mystic.delete()
-            await message.reply_photo(
-                photo=img,
+            await message.reply_message(
                 caption=cap,
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
@@ -476,16 +467,15 @@ async def play_commnd(
                     "f" if fplay else "d",
                 )
                 await mystic.delete()
-                await message.reply_photo(
-                    photo=details["thumb"],
-                    caption=_["play_11"].format(
+                await message.reply_message(
+                    _["play_11"].format(
                         details["title"].title(),
                         details["duration_min"],
                     ),
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
                 return await play_logs(
-                    message, streamtype=f"Searched on Youtube"
+                    message, streamtype=f"Youtube'da arandı"
                 )
             else:
                 buttons = track_markup(
@@ -496,13 +486,12 @@ async def play_commnd(
                     "f" if fplay else "d",
                 )
                 await mystic.delete()
-                await message.reply_photo(
-                    photo=img,
+                await message.reply_message(
                     caption=cap,
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
                 return await play_logs(
-                    message, streamtype=f"URL Searched Inline"
+                    message, streamtype=f"Çevrimiçi URL Araması"
                 )
 
 
@@ -733,8 +722,7 @@ async def slider_queries(client, CallbackQuery, _):
             _, vidid, user_id, query, query_type, cplay, fplay
         )
         med = InputMediaPhoto(
-            media=thumbnail,
-            caption=_["play_11"].format(
+            _["play_11"].format(
                 title.title(),
                 duration_min,
             ),
@@ -758,8 +746,7 @@ async def slider_queries(client, CallbackQuery, _):
             _, vidid, user_id, query, query_type, cplay, fplay
         )
         med = InputMediaPhoto(
-            media=thumbnail,
-            caption=_["play_11"].format(
+            _["play_11"].format(
                 title.title(),
                 duration_min,
             ),

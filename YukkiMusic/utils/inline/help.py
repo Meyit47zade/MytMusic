@@ -11,6 +11,8 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+from config import OWNER_ID
+
 from YukkiMusic import app
 
 
@@ -37,19 +39,11 @@ def help_pannel(_, START: Union[bool, int] = None):
                     text=_["H_B_1"],
                     callback_data="help_callback hb1",
                 ),
-                InlineKeyboardButton(
-                    text=_["H_B_2"],
-                    callback_data="help_callback hb2",
-                ),
             ],
             [
                 InlineKeyboardButton(
-                    text=_["H_B_3"],
-                    callback_data="help_callback hb3",
-                ),
-                InlineKeyboardButton(
-                    text=_["H_B_4"],
-                    callback_data="help_callback hb4",
+                    text=_["H_B_2"],
+                    callback_data="help_callback hb2",
                 ),
             ],
             [
@@ -88,6 +82,14 @@ def private_help_panel(_):
                 text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?start=help",
             ),
+        ],
+        [
+            InlineKeyboardButton(
+                "✦  𝖪𝖺𝗇𝖺𝗅", url="https://t.me/AikoCall"
+            ),
+            InlineKeyboardButton(
+                "✦  𝖮𝗐𝗇𝖾𝗋", url=f"tg://openmessage?user_id=6811941116"
+            )
         ],
     ]
     return buttons

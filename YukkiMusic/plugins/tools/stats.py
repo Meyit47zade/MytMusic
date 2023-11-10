@@ -19,7 +19,7 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
 
 import config
-from config import BANNED_USERS, MUSIC_BOT_NAME
+from config import BANNED_USERS, MUSIC_BOT_NAME, OWNER_ID
 from strings import get_command
 from YukkiMusic import YouTube, app
 from YukkiMusic.core.userbot import assistants
@@ -49,7 +49,7 @@ STATS_COMMAND = get_command("STATS_COMMAND")
     filters.command(STATS_COMMAND)
     & filters.group
     & ~filters.edited
-    & ~BANNED_USERS
+    & filters.user(OWNER_ID)
 )
 @language
 async def stats_global(client, message: Message, _):
@@ -67,7 +67,7 @@ async def stats_global(client, message: Message, _):
     filters.command(GSTATS_COMMAND)
     & filters.group
     & ~filters.edited
-    & ~BANNED_USERS
+    & filters.user(OWNER_ID)
 )
 @language
 async def gstats_global(client, message: Message, _):
@@ -281,23 +281,23 @@ async def overall_stats(client, CallbackQuery, _):
     else:
         ass = "No"
     cm = config.CLEANMODE_DELETE_MINS
-    text = f"""**Bot's Stats and Information:**
+    text = f"""**Bot İstatistikleri :
 
-**Imported Modules:** {mod}
-**Served Chats:** {served_chats} 
-**Served Users:** {served_users} 
-**Blocked Users:** {blocked} 
-**Sudo Users:** {sudoers} 
+Modüller : {mod}
+Toplam Grup : {served_chats} 
+Toplam Kullanıcı : {served_users} 
+Yasaklı Kullanıcı : {blocked} 
+Sudo Kullanıcı : {sudoers} 
     
-**Total Queries:** {total_queries} 
-**Total Assistants:** {assistant}
-**Auto Leaving Assistant:** {ass}
-**Cleanmode duration:** {cm} Mins
+Toplam Sorgu : {total_queries} 
+Toplam Assistan : {assistant}
+Otomatik Çıkış Asistanı : {ass}
+Temizleme modu süresi: {cm} Süre
 
-**Play Duration Limit:** {play_duration} Mins
-**Song Download Limit:** {song} Mins
-**Bot's Server Playlist Limit:** {playlist_limit}
-**Playlist Play Limit:** {fetch_playlist}"""
+Oynatma Limiti : {play_duration} Süre
+İndirme Limiti : {song} Süre
+Sunucu Playlist Limiti : {playlist_limit}
+Playlist Oynatma Limiti : {fetch_playlist}**"""
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
         await CallbackQuery.edit_message_media(
@@ -314,7 +314,7 @@ async def overall_stats(client, CallbackQuery, _):
 async def overall_stats(client, CallbackQuery, _):
     if CallbackQuery.from_user.id not in SUDOERS:
         return await CallbackQuery.answer(
-            "Only for Sudo Users", show_alert=True
+            "Yalnızca Sudo Kullanıcıları için", show_alert=True
         )
     callback_data = CallbackQuery.data.strip()
     what = callback_data.split(None, 1)[1]
@@ -366,36 +366,36 @@ async def overall_stats(client, CallbackQuery, _):
     total_queries = await get_queries()
     blocked = len(BANNED_USERS)
     sudoers = len(await get_sudoers())
-    text = f""" **Bot's Stats and Information:**
+    text = f""" **Bot İstatistikleri :
 
-**Imported Modules:** {mod}
-**Platform:** {sc}
-**Ram:** {ram}
-**Physical Cores:** {p_core}
-**Total Cores:** {t_core}
-**Cpu Frequency:** {cpu_freq}
+Modüller : {mod}
+Platform : {sc}
+Ram : {ram}
+Fiziksel Çekirdek : {p_core}
+Toplam Çekirdek : {t_core}
+İşlemci Frekansı : {cpu_freq}
 
-**Python Version :** {pyver.split()[0]}
-**Pyrogram Version :** {pyrover}
-**Py-TgCalls Version :** {pytgver}
+Python Versiyon : {pyver.split()[0]}
+Pyrogram Versiyon : {pyrover}
+Py-TgCalls Versiyon : {pytgver}
 
-**Storage Avail:** {total[:4]} GiB
-**Storage Used:** {used[:4]} GiB
-**Storage Left:** {free[:4]} GiB
+Depolama Alanı : {total[:4]} GiB
+Kullanılan Depolama : {used[:4]} GiB
+Depolama Sol : {free[:4]} GiB
 
-**Served Chats:** {served_chats} 
-**Served Users:** {served_users} 
-**Blocked Users:** {blocked} 
-**Sudo Users:** {sudoers} 
+Toplam Grup : {served_chats} 
+Toplam Kullanıcı: {served_users} 
+Yasaklı Kullanıcı : {blocked} 
+Sudo Kullanıcı : {sudoers} 
 
-**Mongo Uptime:** {mongouptime[:4]} Days
-**Total DB Size:** {datasize[:6]} Mb
-**Total DB Storage:** {storage} Mb
-**Total DB Collections:** {collections}
-**Total DB Keys:** {objects}
-**Total DB Queries:** `{query}`
-**Total Bot Queries:** `{total_queries} `
-    """
+Mongo Çalışma Süresi : {mongouptime[:4]} Days
+Toplam Veritabanı Boyutu : {datasize[:6]} Mb
+Toplam Veritabanı Depolama Alanı : {storage} Mb
+Toplam Veritabanı Koleksiyonu: {collections}
+Toplam Veritabanı Anahtarı : {objects}
+Toplam Veritabanı Sorgusu : `{query}`
+Toplam Bot Sorgusu : `{total_queries} `
+    **"""
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
         await CallbackQuery.edit_message_media(

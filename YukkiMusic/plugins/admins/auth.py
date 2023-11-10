@@ -7,9 +7,11 @@
 #
 # All rights reserved.
 
+from YukkiMusic.utils import close_key
 from pyrogram import filters
 from pyrogram.types import Message
 
+from YukkiMusic.utils import close_key
 from config import BANNED_USERS, adminlist
 from strings import get_command
 from YukkiMusic import app
@@ -47,7 +49,7 @@ async def auth(client, message: Message, _):
         _check = await get_authuser_names(message.chat.id)
         count = len(_check)
         if int(count) == 20:
-            return await message.reply_text(_["auth_1"])
+            return await message.reply_text(_["auth_1"],reply_markup=close_key,)
         if token not in _check:
             assis = {
                 "auth_user_id": user.id,
@@ -60,9 +62,9 @@ async def auth(client, message: Message, _):
                 if user.id not in get:
                     get.append(user.id)
             await save_authuser(message.chat.id, token, assis)
-            return await message.reply_text(_["auth_2"])
+            return await message.reply_text(_["auth_2"],reply_markup=close_key,)
         else:
-            await message.reply_text(_["auth_3"])
+            await message.reply_text(_["auth_3"],reply_markup=close_key,)
         return
     from_user_id = message.from_user.id
     user_id = message.reply_to_message.from_user.id
@@ -74,7 +76,7 @@ async def auth(client, message: Message, _):
     for smex in _check:
         count += 1
     if int(count) == 20:
-        return await message.reply_text(_["auth_1"])
+        return await message.reply_text(_["auth_1"],reply_markup=close_key,)
     if token not in _check:
         assis = {
             "auth_user_id": user_id,
@@ -87,9 +89,9 @@ async def auth(client, message: Message, _):
             if user_id not in get:
                 get.append(user_id)
         await save_authuser(message.chat.id, token, assis)
-        return await message.reply_text(_["auth_2"])
+        return await message.reply_text(_["auth_2"],reply_markup=close_key,)
     else:
-        await message.reply_text(_["auth_3"])
+        await message.reply_text(_["auth_3"],reply_markup=close_key,)
 
 
 @app.on_message(
@@ -114,9 +116,9 @@ async def unauthusers(client, message: Message, _):
             if user.id in get:
                 get.remove(user.id)
         if deleted:
-            return await message.reply_text(_["auth_4"])
+            return await message.reply_text(_["auth_4"],reply_markup=close_key,)
         else:
-            return await message.reply_text(_["auth_5"])
+            return await message.reply_text(_["auth_5"],reply_markup=close_key,)
     user_id = message.reply_to_message.from_user.id
     token = await int_to_alpha(user_id)
     deleted = await delete_authuser(message.chat.id, token)
@@ -125,9 +127,9 @@ async def unauthusers(client, message: Message, _):
         if user_id in get:
             get.remove(user_id)
     if deleted:
-        return await message.reply_text(_["auth_4"])
+        return await message.reply_text(_["auth_4"],reply_markup=close_key,)
     else:
-        return await message.reply_text(_["auth_5"])
+        return await message.reply_text(_["auth_5"],reply_markup=close_key,)
 
 
 @app.on_message(
@@ -143,7 +145,7 @@ async def authusers(client, message: Message, _):
         return await message.reply_text(_["setting_5"])
     else:
         j = 0
-        mystic = await message.reply_text(_["auth_6"])
+        mystic = await message.reply_text(_["auth_6"],reply_markup=close_key,)
         text = _["auth_7"]
         for note in _playlist:
             _note = await get_authuser(message.chat.id, note)
@@ -159,4 +161,4 @@ async def authusers(client, message: Message, _):
             text += f"{j}➤ {user}[`{user_id}`]\n"
             text += f"   {_['auth_8']} {admin_name}[`{admin_id}`]\n\n"
         await mystic.delete()
-        await message.reply_text(text)
+        await message.reply_text(text,reply_markup=close_key,)

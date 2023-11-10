@@ -10,6 +10,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
+from YukkiMusic.utils import close_key
 from config import BANNED_USERS
 from strings import get_command
 from YukkiMusic import app
@@ -32,9 +33,10 @@ async def pause_admin(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
         return await message.reply_text(_["general_2"])
     if not await is_music_playing(chat_id):
-        return await message.reply_text(_["admin_1"])
+        return await message.reply_text(_["admin_1"],reply_markup=close_key,)
     await music_off(chat_id)
     await Yukki.pause_stream(chat_id)
     await message.reply_text(
-        _["admin_2"].format(message.from_user.mention)
+        _["admin_2"].format(message.from_user.mention),
+    reply_markup=close_key,
     )

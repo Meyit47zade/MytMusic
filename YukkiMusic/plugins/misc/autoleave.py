@@ -10,6 +10,7 @@
 import asyncio
 from datetime import datetime
 
+from YukkiMusic.utils import close_key
 import config
 from YukkiMusic import app
 from YukkiMusic.core.call import Yukki, autoend
@@ -79,8 +80,9 @@ async def auto_end():
                 try:
                     await app.send_message(
                         chat_id,
-                        "Bot has left voice chat due to inactivity to avoid overload on servers. No-one was listening to the bot on voice chat.",
-                    )
+                        "💬** Asistan hareketsizlik nedeniyle sesli sohbetten ayrıldı, Sesli sohbette kimse botu dinlemiyordu .**",
+                        reply_markup=close_key,
+          )
                 except:
                     continue
 

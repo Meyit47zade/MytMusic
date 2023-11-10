@@ -295,15 +295,15 @@ class Call(PyTgCalls):
                 )
             except Exception as e:
                 raise AssistantErr(
-                    "**No Active Voice Chat Found**\n\nPlease make sure group's voice chat is enabled. If already enabled, please end it and start fresh voice chat again and if the problem continues, try /restart"
+                    "**💬 Lütfen grubun sesli sohbetinin etkinleştirildiğinden emin olun. Zaten etkinse, lütfen sesli sohbeti sonlandırın ve yeniden başlatın , sorun devam ederse /restart deneyin ...**"
                 )
         except AlreadyJoinedError:
             raise AssistantErr(
-                "**Assistant Already in Voice Chat**\n\nSystems have detected that assistant is already there in the voice chat, this issue generally comes when you play 2 queries together.\n\nIf assistant is not present in voice chat, please end voice chat and start fresh voice chat again and if the  problem continues, try /restart"
+                "**💬 Sistemler, asistanın zaten sesli sohbette olduğunu algıladı. Bu sorun genellikle 2 sorguyu birlikte yürüttüğünüzde oluşuyor , sorun devam ederse /restart deneyin ...**"
             )
         except TelegramServerError:
             raise AssistantErr(
-                "**Telegram Server Error**\n\nTelegram is having some internal server problems, Please try playing again.\n\n If this problem keeps coming everytime, please end your voice chat and start fresh voice chat again."
+                "**💬 Telegram bazı dahili sunucu sorunları yaşıyor, Lütfen tekrar oynatmayı deneyin , Bu sorun her seferinde devam ederse, lütfen sesli sohbetinizi sonlandırın ve yeni bir sesli sohbet başlatın...**"
             )
         await add_active_chat(chat_id)
         await mute_off(chat_id)
@@ -377,13 +377,11 @@ class Call(PyTgCalls):
                         original_chat_id,
                         text=_["call_9"],
                     )
-                img = await gen_thumb(videoid)
                 button = telegram_markup(_, chat_id)
-                run = await app.send_photo(
+                run = await app.send_message(
                     original_chat_id,
-                    photo=img,
-                    caption=_["stream_1"].format(
-                        user,
+                    _["stream_1"].format(
+                        title, check[0]["dur"], user,
                         f"https://t.me/{app.username}?start=info_{videoid}",
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
@@ -426,14 +424,12 @@ class Call(PyTgCalls):
                         original_chat_id,
                         text=_["call_9"],
                     )
-                img = await gen_thumb(videoid)
                 button = stream_markup(_, videoid, chat_id)
                 await mystic.delete()
-                run = await app.send_photo(
+                run = await app.send_message(
                     original_chat_id,
-                    photo=img,
-                    caption=_["stream_1"].format(
-                        user,
+                    _["stream_1"].format(
+                        title, check[0]["dur"], user,
                         f"https://t.me/{app.username}?start=info_{videoid}",
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
@@ -460,10 +456,9 @@ class Call(PyTgCalls):
                         text=_["call_9"],
                     )
                 button = telegram_markup(_, chat_id)
-                run = await app.send_photo(
+                run = await app.send_message(
                     original_chat_id,
-                    photo=config.STREAM_IMG_URL,
-                    caption=_["stream_2"].format(user),
+                    _["stream_2"].format(title, check[0]["dur"], user),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
                 db[chat_id][0]["mystic"] = run
@@ -489,12 +484,9 @@ class Call(PyTgCalls):
                     )
                 if videoid == "telegram":
                     button = telegram_markup(_, chat_id)
-                    run = await app.send_photo(
+                    run = await app.send_message(
                         original_chat_id,
-                        photo=config.TELEGRAM_AUDIO_URL
-                        if str(streamtype) == "audio"
-                        else config.TELEGRAM_VIDEO_URL,
-                        caption=_["stream_3"].format(
+                        _["stream_3"].format(
                             title, check[0]["dur"], user
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
@@ -503,10 +495,9 @@ class Call(PyTgCalls):
                     db[chat_id][0]["markup"] = "tg"
                 elif videoid == "soundcloud":
                     button = telegram_markup(_, chat_id)
-                    run = await app.send_photo(
+                    run = await app.send_message(
                         original_chat_id,
-                        photo=config.SOUNCLOUD_IMG_URL,
-                        caption=_["stream_3"].format(
+                        _["stream_3"].format(
                             title, check[0]["dur"], user
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
@@ -514,13 +505,11 @@ class Call(PyTgCalls):
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "tg"
                 else:
-                    img = await gen_thumb(videoid)
                     button = stream_markup(_, videoid, chat_id)
-                    run = await app.send_photo(
+                    run = await app.send_message(
                         original_chat_id,
-                        photo=img,
-                        caption=_["stream_1"].format(
-                            user,
+                        _["stream_1"].format(
+                            title, check[0]["dur"], user,
                             f"https://t.me/{app.username}?start=info_{videoid}",
                         ),
                         reply_markup=InlineKeyboardMarkup(button),

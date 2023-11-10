@@ -47,24 +47,18 @@ async def inline_query_handler(client, query):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch on Youtube",
+                            text="🎥 YouTube İzle",
                             url=link,
                         )
                     ],
                 ]
             )
-            searched_text = f"""
-❇️**Title:** [{title}]({link})
+            searched_text = f"""**
+💬Başlık : [{title}]({link})
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
-
-__Reply with /play on this searched message to stream it on voice chat.__
-
-⚡️ ** Inline Search By {MUSIC_BOT_NAME} **"""
+🔎 Süre : {duration} Mins
+💬 Kanal Link : ({channellink})
+**"""
             answers.append(
                 InlineQueryResultPhoto(
                     photo_url=thumbnail,

@@ -27,12 +27,12 @@ def PlayWrapper(command):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    "Bot is under maintenance. Please wait for some time..."
+                    "Bot bakımda. Lütfen biraz bekleyin..."
                 )
         if PRIVATE_BOT_MODE == str(True):
             if not await is_served_private_chat(message.chat.id):
                 await message.reply_text(
-                    "**Private Music Bot**\n\nOnly for authorized chats from the owner. Ask my owner to allow your chat first."
+                    "**🌟 Yetkili Gruplar Listesinde Olmalısınız !\n\n💬 Lütfen Destek Grubundan Bunu Gerçekleştirmesini İsteyin ...."
                 )
                 return await app.leave_chat(message.chat.id)
         if await is_commanddelete_on(message.chat.id):
@@ -68,9 +68,8 @@ def PlayWrapper(command):
                 if "stream" in message.command:
                     return await message.reply_text(_["str_1"])
                 buttons = botplaylist_markup(_)
-                return await message.reply_photo(
-                    photo=PLAYLIST_IMG_URL,
-                    caption=_["playlist_1"],
+                return await message.reply_text(
+                    _["playlist_1"],
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
         if message.sender_chat:
@@ -78,7 +77,7 @@ def PlayWrapper(command):
                 [
                     [
                         InlineKeyboardButton(
-                            text="How to Fix this? ",
+                            text="Nasıl Düzeltebilir",
                             callback_data="AnonymousAdmin",
                         ),
                     ]

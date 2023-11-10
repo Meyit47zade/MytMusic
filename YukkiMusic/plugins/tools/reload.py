@@ -8,6 +8,7 @@
 # All rights reserved.
 import asyncio
 
+from YukkiMusic.utils import close_key
 from pyrogram import filters
 from pyrogram.types import CallbackQuery, Message
 
@@ -47,10 +48,11 @@ async def reload_admin_cache(client, message: Message, _):
         for user in authusers:
             user_id = await alpha_to_int(user)
             adminlist[chat_id].append(user_id)
-        await message.reply_text(_["admin_20"])
+        await message.reply_text(_["admin_20"],
+        reply_markup=close_key,)
     except:
         await message.reply_text(
-            "Failed to reload admincache. Make sure Bot is admin in your chat."
+            "**Admin Listesi Yüklenemedi. Bot'un Sohbetinizde Yönetici Olduğundan Emin Olun .**"
         )
 
 
@@ -63,7 +65,7 @@ async def reload_admin_cache(client, message: Message, _):
 @AdminActual
 async def restartbot(client, message: Message, _):
     mystic = await message.reply_text(
-        f"Please Wait.. Restarting {MUSIC_BOT_NAME} for your chat.."
+        f"⏳ **Lütfen Bekleyin , Yeniden başlatılıyor...**"
     )
     await asyncio.sleep(1)
     try:
@@ -83,7 +85,8 @@ async def restartbot(client, message: Message, _):
         except:
             pass
     return await mystic.edit_text(
-        "Successfully restarted. Try playing now.."
+        "**♻️ Bot yeniden başlatıldı ...\n♻️ Önbellek Temizlendi ...**",
+    reply_markup=close_key,
     )
 
 
@@ -114,11 +117,11 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
     task = lyrical.get(message_id)
     if not task:
         return await CallbackQuery.answer(
-            "Downloading already Completed.", show_alert=True
+            "İndirme Tamamlandı.", show_alert=True
         )
     if task.done() or task.cancelled():
         return await CallbackQuery.answer(
-            "Downloading already Completed or Cancelled.",
+            "İndirme Tamamlandı veya İptal Edildi.",
             show_alert=True,
         )
     if not task.done():
@@ -129,15 +132,15 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
             except:
                 pass
             await CallbackQuery.answer(
-                "Downloading Cancelled", show_alert=True
+                "İndirme İptal Edildi", show_alert=True
             )
             return await CallbackQuery.edit_message_text(
-                f"Download Cancelled by {CallbackQuery.from_user.mention}"
+                f"İndirme İptal eden {CallbackQuery.from_user.mention}"
             )
         except:
             return await CallbackQuery.answer(
-                "Failed to stop the Downloading.", show_alert=True
+                "İndirme durdurulamadı.", show_alert=True
             )
     await CallbackQuery.answer(
-        "Failed to recognize the running task", show_alert=True
+        "Çalışan görev tanınmadı", show_alert=True
     )

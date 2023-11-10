@@ -10,6 +10,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
+from YukkiMusic.utils import close_key
 from config import BANNED_USERS
 from strings import get_command
 from YukkiMusic import app
@@ -31,7 +32,7 @@ LOOP_COMMAND = get_command("LOOP_COMMAND")
 async def admins(cli, message: Message, _, chat_id):
     usage = _["admin_24"]
     if len(message.command) != 2:
-        return await message.reply_text(usage)
+        return await message.reply_text(usage,reply_markup=close_key,)
     state = message.text.split(None, 1)[1].strip()
     if state.isnumeric():
         state = int(state)
@@ -44,7 +45,8 @@ async def admins(cli, message: Message, _, chat_id):
             await set_loop(chat_id, state)
             return await message.reply_text(
                 _["admin_25"].format(
-                    message.from_user.first_name, state
+                    message.from_user.first_name, state,
+                reply_markup=close_key,
                 )
             )
         else:
@@ -52,7 +54,8 @@ async def admins(cli, message: Message, _, chat_id):
     elif state.lower() == "enable":
         await set_loop(chat_id, 10)
         return await message.reply_text(
-            _["admin_25"].format(message.from_user.first_name, 10)
+            _["admin_25"].format(message.from_user.first_name, 10),
+        reply_markup=close_key,
         )
     elif state.lower() == "disable":
         await set_loop(chat_id, 0)

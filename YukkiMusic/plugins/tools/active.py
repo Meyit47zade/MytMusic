@@ -10,6 +10,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
+from YukkiMusic.utils import close_key
 from strings import get_command
 from YukkiMusic import app
 from YukkiMusic.misc import SUDOERS
@@ -24,7 +25,7 @@ ACTIVEVIDEO_COMMAND = get_command("ACTIVEVIDEO_COMMAND")
 @app.on_message(filters.command(ACTIVEVC_COMMAND) & SUDOERS)
 async def activevc(_, message: Message):
     mystic = await message.reply_text(
-        "Getting active voice chats.. Please hold"
+        "Aktif sesli sohbetler alınıyor."
     )
     served_chats = await get_active_chats()
     text = ""
@@ -36,23 +37,24 @@ async def activevc(_, message: Message):
             title = "Private Group"
         if (await app.get_chat(x)).username:
             user = (await app.get_chat(x)).username
-            text += f"<b>{j + 1}.</b>  [{title}](https://t.me/{user})[`{x}`]\n"
+            text += f"<b>{j + 1} .</b>  [{title}](https://t.me/{user})[ `{x}` ] \n"
         else:
-            text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
+            text += f"<b>{j + 1} . {title}</b> [ `{x}` ] \n"
         j += 1
     if not text:
-        await mystic.edit_text("No Active Voice Chats")
+        await mystic.edit_text("Aktif Sesli Sohbet Yok")
     else:
         await mystic.edit_text(
-            f"**Active Voice Chats:-**\n\n{text}",
+            f"**Aktif Sesli Sohbetler - **\n\n{text}",
             disable_web_page_preview=True,
+            reply_markup=close_key,
         )
 
 
 @app.on_message(filters.command(ACTIVEVIDEO_COMMAND) & SUDOERS)
 async def activevi_(_, message: Message):
     mystic = await message.reply_text(
-        "Getting active video chats.. Please hold"
+        "Aktif görüntülü sohbetler alınıyor."
     )
     served_chats = await get_active_video_chats()
     text = ""
@@ -64,14 +66,15 @@ async def activevi_(_, message: Message):
             title = "Private Group"
         if (await app.get_chat(x)).username:
             user = (await app.get_chat(x)).username
-            text += f"<b>{j + 1}.</b>  [{title}](https://t.me/{user})[`{x}`]\n"
+            text += f"<b>{j + 1} .</b>  [{title}](https://t.me/{user})[ `{x}` ] \n"
         else:
-            text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
+            text += f"<b>{j + 1} . {title}</b> [ `{x}` ] \n"
         j += 1
     if not text:
-        await mystic.edit_text("No Active Voice Chats")
+        await mystic.edit_text("Aktif Sesli Sohbet Yok")
     else:
         await mystic.edit_text(
-            f"**Active Video Calls:-**\n\n{text}",
+            f"**Aktif Görüntülü Aramalar - **\n\n{text}",
             disable_web_page_preview=True,
+            reply_markup=close_key,
         )

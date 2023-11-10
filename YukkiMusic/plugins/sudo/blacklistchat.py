@@ -10,6 +10,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
+from YukkiMusic.utils import close_key
 from config import BANNED_USERS
 from strings import get_command
 from YukkiMusic import app
@@ -36,7 +37,7 @@ async def blacklist_chat_func(client, message: Message, _):
         return await message.reply_text(_["black_2"])
     blacklisted = await blacklist_chat(chat_id)
     if blacklisted:
-        await message.reply_text(_["black_3"])
+        await message.reply_text(_["black_3"],reply_markup=close_key,)
     else:
         await message.reply_text("Something wrong happened.")
     try:
@@ -55,7 +56,7 @@ async def white_funciton(client, message: Message, _):
         return await message.reply_text(_["black_5"])
     whitelisted = await whitelist_chat(chat_id)
     if whitelisted:
-        return await message.reply_text(_["black_6"])
+        return await message.reply_text(_["black_6"],reply_markup=close_key,)
     await message.reply_text("Something wrong happened.")
 
 
@@ -76,4 +77,4 @@ async def all_chats(client, message: Message, _):
     if j == 0:
         await message.reply_text(_["black_8"])
     else:
-        await message.reply_text(text)
+        await message.reply_text(text,reply_markup=close_key,)

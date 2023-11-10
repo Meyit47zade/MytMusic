@@ -215,7 +215,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         )
     elif command == "Skip":
         check = db.get(chat_id)
-        txt = f"Skipped by {mention}"
+        txt = f"**➡️ Kullanıcı\n│ \n└  {mention}**"
         popped = None
         try:
             popped = check.pop(0)
@@ -224,7 +224,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     await auto_clean(popped)
             if not check:
                 await CallbackQuery.edit_message_text(
-                    f"Skipped by {mention}"
+                    f"**➡️ Kullanıcı\n│ \n└  {mention}**"
                 )
                 await CallbackQuery.message.reply_text(
                     _["admin_10"].format(mention)
@@ -236,7 +236,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         except:
             try:
                 await CallbackQuery.edit_message_text(
-                    f"Skipped by {mention}"
+                    f"**➡️ Kullanıcı\n│ \n└  {mention}**"
                 )
                 await CallbackQuery.message.reply_text(
                     _["admin_10"].format(mention)
@@ -265,11 +265,9 @@ async def del_back_playlist(client, CallbackQuery, _):
                     _["call_9"]
                 )
             button = telegram_markup(_, chat_id)
-            img = await gen_thumb(videoid)
-            run = await CallbackQuery.message.reply_photo(
-                photo=img,
-                caption=_["stream_1"].format(
-                    user,
+            run = await CallbackQuery.message.reply_message(
+                _["stream_1"].format(
+                    title, check[0]["dur"], user,
                     f"https://t.me/{app.username}?start=info_{videoid}",
                 ),
                 reply_markup=InlineKeyboardMarkup(button),
@@ -297,11 +295,9 @@ async def del_back_playlist(client, CallbackQuery, _):
             except Exception:
                 return await mystic.edit_text(_["call_9"])
             button = stream_markup(_, videoid, chat_id)
-            img = await gen_thumb(videoid)
-            run = await CallbackQuery.message.reply_photo(
-                photo=img,
-                caption=_["stream_1"].format(
-                    user,
+            run = await CallbackQuery.message.reply_text(
+                _["stream_1"].format(
+                    title, check[0]["dur"], user,
                     f"https://t.me/{app.username}?start=info_{videoid}",
                 ),
                 reply_markup=InlineKeyboardMarkup(button),
@@ -320,9 +316,8 @@ async def del_back_playlist(client, CallbackQuery, _):
                     _["call_9"]
                 )
             button = telegram_markup(_, chat_id)
-            run = await CallbackQuery.message.reply_photo(
-                photo=STREAM_IMG_URL,
-                caption=_["stream_2"].format(user),
+            run = await CallbackQuery.message.reply_message(
+                _["stream_2"].format(title, check[0]["dur"], user),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run
@@ -337,11 +332,8 @@ async def del_back_playlist(client, CallbackQuery, _):
                 )
             if videoid == "telegram":
                 button = telegram_markup(_, chat_id)
-                run = await CallbackQuery.message.reply_photo(
-                    photo=TELEGRAM_AUDIO_URL
-                    if str(streamtype) == "audio"
-                    else TELEGRAM_VIDEO_URL,
-                    caption=_["stream_3"].format(
+                run = await CallbackQuery.message.reply_text(
+                    _["stream_3"].format(
                         title, check[0]["dur"], user
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
@@ -350,11 +342,8 @@ async def del_back_playlist(client, CallbackQuery, _):
                 db[chat_id][0]["markup"] = "tg"
             elif videoid == "soundcloud":
                 button = telegram_markup(_, chat_id)
-                run = await CallbackQuery.message.reply_photo(
-                    photo=SOUNCLOUD_IMG_URL
-                    if str(streamtype) == "audio"
-                    else TELEGRAM_VIDEO_URL,
-                    caption=_["stream_3"].format(
+                run = await CallbackQuery.message.reply_message(
+                    _["stream_3"].format(
                         title, check[0]["dur"], user
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
@@ -363,11 +352,9 @@ async def del_back_playlist(client, CallbackQuery, _):
                 db[chat_id][0]["markup"] = "tg"
             else:
                 button = stream_markup(_, videoid, chat_id)
-                img = await gen_thumb(videoid)
-                run = await CallbackQuery.message.reply_photo(
-                    photo=img,
-                    caption=_["stream_1"].format(
-                        user,
+                run = await CallbackQuery.message.reply_text(
+                    _["stream_1"].format(
+                        title, check[0]["dur"], user,
                         f"https://t.me/{app.username}?start=info_{videoid}",
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
@@ -401,7 +388,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             if (duration_played - duration_to_skip) <= 10:
                 bet = seconds_to_min(duration_played)
                 return await CallbackQuery.answer(
-                    f"Bot is not able to seek due to total duration has been exceeded.\n\nCurrently played** {bet}** mins out of **{duration}** mins",
+                    f"Bot, toplam süre aşıldığı için arama yapamıyor.\n\nŞu anda oynanan** {bet}** dakika üzerinden **{duration}** dakika",
                     show_alert=True,
                 )
             to_seek = duration_played - duration_to_skip + 1
@@ -412,7 +399,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             ) <= 10:
                 bet = seconds_to_min(duration_played)
                 return await CallbackQuery.answer(
-                    f"Bot is not able to seek due to total duration has been exceeded.\n\nCurrently played** {bet}** mins out of **{duration}** mins",
+                    f"Bot, toplam süre aşıldığı için arama yapamıyor.\n\nŞu anda oynanan** {bet}** dakika üzerinden **{duration}** dakika",
                     show_alert=True,
                 )
             to_seek = duration_played + duration_to_skip + 1
@@ -440,5 +427,5 @@ async def del_back_playlist(client, CallbackQuery, _):
             db[chat_id][0]["played"] += duration_to_skip
         string = _["admin_33"].format(seconds_to_min(to_seek))
         await mystic.edit_text(
-            f"{string}\n\nChanges done by: {mention}"
+            f"{string}\n│ \n└ {mention}"
         )
