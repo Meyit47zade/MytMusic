@@ -57,8 +57,8 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("BuketBilgi")
-                await self.one.join_chat("BuketBilgi")
+                await self.one.join_chat("AikoCall")
+                await self.one.join_chat("AikoCall")
                 await self.one.join_chat("MuzikKayit")
             except:
                 pass
@@ -88,8 +88,8 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("BuketBilgi")
-                await self.two.join_chat("BuketBilgi")
+                await self.two.join_chat("AikoCall")
+                await self.two.join_chat("AikoCall")
                 await self.two.join_chat("MuzikKayit")
             except:
                 pass
@@ -119,8 +119,8 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("BuketBilgi")
-                await self.three.join_chat("BuketBilgi")
+                await self.three.join_chat("AikoCall")
+                await self.three.join_chat("AikoCall")
                 await self.three.join_chat("MuzikKayit")
             except:
                 pass
@@ -150,8 +150,8 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("BuketBilgi")
-                await self.four.join_chat("BuketBilgi")
+                await self.four.join_chat("AikoCall")
+                await self.four.join_chat("AikoCall")
                 await self.four.join_chat("MuzikKayit")
             except:
                 pass
@@ -181,8 +181,8 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("BuketBilgi")
-                await self.five.join_chat("BuketBilgi")
+                await self.five.join_chat("AikoCall")
+                await self.five.join_chat("AikoCall")
                 await self.five.join_chat("MuzikKayit!")
             except:
                 pass
