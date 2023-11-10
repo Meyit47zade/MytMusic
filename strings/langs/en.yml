@@ -237,7 +237,7 @@ song_11 : "Yükleme Başladı\n\nYükleme hızı yavaş olabilir. Lütfen bekley
 queue_1 : "• **Lütfen Bekleyin...**"
 queue_2 : "• **Sırada Hiç Birşey Yok.**"
 queue_3 : "<u>**Sıradaki Parçalar:</u>** [ ᴛɪᴋʟᴀ ]({0})"
-queue_4 : "⏳** Siraya eklendi #{0}**\n\n📝 **ʙᴀşʟɪᴋ :** {1}\n**⌚ sᴜ̈ʀᴇ :** {2}\n🎯 **ᴛᴀʟᴇᴘ :** {3}"
+queue_4 : "⏳** {0}. Siraya eklendi**\n\n📝 **ʙᴀşʟɪᴋ :** {1}\n**⌚ sᴜ̈ʀᴇ :** {2}\n🎯 **ᴛᴀʟᴇᴘ :** {3}"
 queue_5 : "• **Sırada sadece bir parça var, Lütfen kontrol listesine biraz daha ekleyin .**"
 
 # All Streaming Lines
