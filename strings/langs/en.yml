@@ -1,9 +1,9 @@
 name : English 
 
 # General Strings 
-general_1 : "• **Kullanıcı id verin.**"
+general_1 : "✦ **Kullanıcı id verin.**"
 general_2 : "Hata! Komutun Yanlış Kullanımı."
-general_3 : "**💬 Lütfen Beni Yönetici Yapın , Yönetici Olduğumu Düşünüyorsanız /reload Kullanın .**"
+general_3 : "**✦ Lütfen Beni Yönetici Yapın , Yönetici Olduğumu Düşünüyorsanız /reload Kullanın .**"
 general_4 : "Bu sohbet grubunda isimsiz bir yöneticisiniz!\nYönetici Haklarından Kullanıcı Hesabına geri dönün."
 general_5 : "• **Bu eylemi gerçekleştirmek için SESLİ SOHBET YETKİNİZ olmalı.**"
 general_6 : "**• Bot sesli sohbette yayın yapmıyor .**"
@@ -15,11 +15,11 @@ tg_2 : "Medya telegramdan indirilemedi."
 # Core - Call.py
 call_1 : "**Bot, asistan hesabını grubunuza davet etmek için BAĞLANTI İLE DAVET İzni gerektirir .**"
 call_2 : "Asistan, grubunuzda yasaklanmış, lütfen yasağı kaldırın.\n\n**Asistan Kullanıcı Adı:** @{0}\n**Asistan Kimliği:** {1}"
-call_3 : "**Asistan Hesabını sohbetinize davet ederken hata oluştu** .\n\n**Nedeni**: **Asistan grubunuzda yasaklı veya botta BAĞLANTI İLE DAVET yetkisi yok .**"
+call_3 : "**Asistan Hesabını sohbetinize davet ederken hata oluştu** .\n\n**Nedeni**: **Asistan grubunuzda yasaklı veya botun BAĞLANTI İLE DAVET yetkisi yok .**"
 call_4 : "Bot, asistan hesabını sohbet grubunuza davet etmek için **BAĞLANTI İLE DAVET** İzni gerektirir..."
 call_5 : "**Asistan Sohbetinize Katılacak ... Lütfen Bekleyin !**"
 call_6 : "**Asistan [ {0} ] Başarıyla Katıldı.\n\nMüzik Şimdi Başlatılıyor .**"
-call_7 : "**Zararlı Yönetici Hakkı Verildi **\n\nLütfen ** KULLANICILARI YASAK** haklarını bottan kaldırın."
+call_7 : "**Zararlı Yönetici Hakkı Verildi **\n\nLütfen ** KULLANICILARI YASAKLAMA** haklarını bottan kaldırın."
 call_8 : "**Zararlı Yönetici Hakkı Verildi **\n\nLütfen bottan **YENİ YÖNETİCİLER EKLE** haklarını kaldırın."
 call_9 : "**Parça Değiştirilemedi .\n└ Atlamak için /atla yazın .**"
 call_10 : "Oynatma Listesinden Sonraki Parçayı İndirme"
@@ -54,7 +54,7 @@ admin_15 : "Verdiğiniz değer için sırada yeterli parça yok. Lütfen 1 ile {
 admin_16 : "Belirli bir parçaya geçilemedi.\n\nSırayı /sira göre kontrol edin"
 admin_17 : "{0} Lütfen bekleyin ."
 admin_18 : "**Yönetici Listesi Bulunamadı .\n\nLütfen yönetici listesini /reload yoluyla yeniden yükleyin .**"
-admin_19 : "**Bunu gerçekleştirmek için SESLİ SOHBET YETKİNİZ olmalı .\nZaten yöneticiyseniz, /reload aracılığıyla yeniden yükleyin .**"
+admin_19 : "**Bunu gerçekleştirmek için SESLİ SOHBET YETKİNİZ olmalı .\nZaten yöneticiyseniz, /reload komutunu deneyin .**"
 admin_20 : "**🎄 Bot yeniden başladı.**\n**🎄 Admin listesi güncellendi.**"
 admin_21 : "Sırada karıştırılacak bir şey yok"
 admin_22 : "Karıştırılamadı.\n\nSırayı kontrol edin: /sira"
@@ -74,7 +74,7 @@ admin_34 : "Mevcut akış aranamadı."
 # Bot 
 
 # Start
-start_1 : "🇹🇷 **Beni Grubunuza davet ettiğiniz için teşekkürler**.\n\n**💬 {1} Aktif ve Çalışıyor**.\n\n•** Herhangi Bir Yardım İçin Yardım Butonuna Göz Atın** ."
+start_1 : "🇹🇷 **Beni Grubunuza davet ettiğiniz için teşekkürler**.\n\n**💬 {1} Aktif ve Çalışıyor**.\n\n•** Herhangi Bir Yardım İçin Butonlara Göz Atın** ."
 start_2 : "**✦ Merhaba !\n\n✦ Son Derece Gelişmiş Müzik ve Video Oynatma Botu Tamamen Ücretsizdir !\n\n✦ Komutlar veya Destek için Aşağıdaki Butonları Kullanın !**"
 start_3 : "💭 **Merhaba** {0}\n\n**📖 Lütfen Beni Yönetici Yapin ...**\n\n**Asistan Adı** : @{1}\n**Asistan ID** : {2}"
 start_4 : "**Çok Şanslısınız {0}'un Değerli Sahibi [ {1} ] Grubunuza katıldı . . .**"
@@ -84,7 +84,7 @@ start_7 : "**Kara Listeye Alınmış Sohbet\nSohbetiniz Bot tarafından kara lis
 
 # Help
 help_1 : "**💬 Gerekli Yetkiler :\n│ \n│ \n└ Sesli Sohbet Yetkisi\n│ \n└ Bağlantı İle Davet\n│ \n└ Mesajları Silme Yetkisi**"
-help_2 : "📝**Yardım için PM'den bana ulaşın.**"
+help_2 : "📝 **Yardım için PM'den bana ulaşın.**"
 
 # Settings
 setting_1 : "⚙️ **Müzik Botu Ayarları**\n\n🖇**Grup Adı :** {0}\n🔖**Grup ID :** `{1}`"
@@ -153,9 +153,9 @@ cplay_5 : "Yalnızca Kanallar Desteklenir."
 cplay_6 : "Kanalı bu gruba bağlamak için[{0}] kanalın **Sahibi** olmanız gerekir.\n**Kanal Sahibi:** @{1}\n\nAlternatif olarak grubunuzu o kanala bağlayabilirsiniz. ve ardından `/channelplay bağlantılı ile bağlanmayı deneyin`"
 
 #Play
-play_1 : "**• ʏᴜ̈ᴋʟᴇɴɪʏᴏʀ . . .**"
+play_1 : "**✦ ʏᴜ̈ᴋʟᴇɴɪʏᴏʀ . . .**"
 play_2 : "**🏷Kanal Oynatma Modu\n🔄 Sorgu İşleniyor... Lütfen Bekleyin!\n\nBağlı Kanal: {0} Modu\n🔄 Sorgu İşleniyor... Lütfen Bekleyin!\n\nBağlı Kanal:** {0}"
-play_3 : "• **Sorgu İşlenemedi !**"
+play_3 : "✦ **Sorgu İşlenemedi !**"
 play_4 : "🖇 **Yalnızca Yöneticiler Oynatır**\nYalnızca Yöneticiler ve Yetkilendirme Kullanıcıları bu grupta müzik çalabilir.\n\nModu /playmode aracılığıyla değiştirin ve zaten yöneticiyseniz, /admincache aracılığıyla admincache'i yeniden yükleyin"
 play_5 : "Ses dosyası işlenemedi.\n\nSes Dosyası Boyutu 100 mb'den Küçük Olmalı"
 play_6 : "**Süre Sınırı Aşıldı**\n\n**İzin Verilen Süre: **{0} dakika\n**Alınan Süre:** {1} dakika(s)"
@@ -174,7 +174,7 @@ play_18 : "**Etkin Sesli Sohbet Bulunamadı**\n\nZorla oynatmayı kullanmak içi
 
 
 #Playlist
-playlist_1 : "**Kullanım :** /oynat [**Müzik Adı**]\n\n➡️ **Aşağıdaki butonları Deneyiniz.**"
+playlist_1 : "**Kullanım :** /oynat [** Müzik Adı **]\n\n➡️ **Aşağıdaki butonları Deneyiniz.**"
 playlist_2 : "Çalma listeniz alınıyor. Lütfen bekleyin"
 playlist_3 : "Bot Sunucusunda oynatma listeniz yok."
 playlist_4 : "Getirilen Oynatma Listesit:\n\n"
@@ -234,17 +234,17 @@ song_10 : "Sunuculardan telegrama yüklenemedi."
 song_11 : "Yükleme Başladı\n\nYükleme hızı yavaş olabilir. Lütfen bekleyin.."
 
 # Tools - Queue
-queue_1 : "• **Lütfen Bekleyin...**"
-queue_2 : "• **Sırada Hiç Birşey Yok.**"
+queue_1 : "✦ **Lütfen Bekleyin...**"
+queue_2 : "✦ **Sırada Hiç Birşey Yok.**"
 queue_3 : "<u>**Sıradaki Parçalar:</u>** [ ᴛɪᴋʟᴀ ]({0})"
 queue_4 : "⏳** {0}. Siraya eklendi**\n\n📝 **ʙᴀşʟɪᴋ :** {1}\n**⌚ sᴜ̈ʀᴇ :** {2}\n🎯 **ᴛᴀʟᴇᴘ :** {3}"
-queue_5 : "• **Sırada sadece bir parça var, Lütfen kontrol listesine biraz daha ekleyin .**"
+queue_5 : "✦ **Sırada sadece bir parça var, Lütfen kontrol listesine biraz daha ekleyin .**"
 
 # All Streaming Lines
-stream_1 : "➻ **ᴏʏɴᴀᴛɪʟɪʏᴏʀ**\n\n**📝 ʙᴀşʟɪᴋ :** {0}\n⌚ **sᴜ̈ʀᴇ **: {1}\n🎯 **ᴛᴀʟᴇᴘ :** {2}"
-stream_2 : "➻ **ᴏʏɴᴀᴛɪʟɪʏᴏʀ**\n\n**📝 ʙᴀşʟɪᴋ :** {0}\n⌚ **sᴜ̈ʀᴇ **: {1}\n🎯 **ᴛᴀʟᴇᴘ :** {2}"
-stream_3 : "➻ **ᴏʏɴᴀᴛɪʟɪʏᴏʀ**\n\n**📝 ʙᴀşʟɪᴋ :** {0}\n⌚ **sᴜ̈ʀᴇ **: {1}\n🎯 **ᴛᴀʟᴇᴘ :** {2}"
-stream_4 : "➻ **ᴏʏɴᴀᴛɪʟɪʏᴏʀ**\n\n**📝 ʙᴀşʟɪᴋ :** {0}\n⌚ **sᴜ̈ʀᴇ **: {1}\n🎯 **ᴛᴀʟᴇᴘ :** {2}"
+stream_1 : "✦ **ᴏʏɴᴀᴛɪʟɪʏᴏʀ**\n\n**📝 ʙᴀşʟɪᴋ :** {0}\n⌚ **sᴜ̈ʀᴇ **: {1}\n🎯 **ᴛᴀʟᴇᴘ :** {2}"
+stream_2 : "✦ **ᴏʏɴᴀᴛɪʟɪʏᴏʀ**\n\n**📝 ʙᴀşʟɪᴋ :** {0}\n⌚ **sᴜ̈ʀᴇ **: {1}\n🎯 **ᴛᴀʟᴇᴘ :** {2}"
+stream_3 : "✦ **ᴏʏɴᴀᴛɪʟɪʏᴏʀ**\n\n**📝 ʙᴀşʟɪᴋ :** {0}\n⌚ **sᴜ̈ʀᴇ **: {1}\n🎯 **ᴛᴀʟᴇᴘ :** {2}"
+stream_4 : "✦ **ᴏʏɴᴀᴛɪʟɪʏᴏʀ**\n\n**📝 ʙᴀşʟɪᴋ :** {0}\n⌚ **sᴜ̈ʀᴇ **: {1}\n🎯 **ᴛᴀʟᴇᴘ :** {2}"
 
 # Inline Butto sen 
 
@@ -263,14 +263,14 @@ S_B_3 : "📨 𝖣𝖾𝗌𝗍𝖾𝗄"
 S_B_4 : "✦  𝖪𝖺𝗇𝖺𝗅"
 S_B_5 : "✚ 𝖡𝖾𝗇𝗂 𝖦𝗋𝗎𝖻𝖺 𝖤𝗄𝗅𝖾"
 S_B_6 : "💡 Git Repo"
-S_B_7 : "✦  𝖮𝗐𝗇𝖾𝗋"
+S_B_7 : "✦  𝖲𝖺𝗁𝗂𝗉"
 S_B_8 : "📚 𝖪𝗈𝗆𝗎𝗍𝗅𝖺𝗋"
 
 #Help 
 H_B_1 : "📚 ᴍᴜ̈ᴢɪᴋ ᴋᴏᴍᴜᴛʟᴀʀɪ"
 H_B_2 : "📝 ᴋᴀɴᴀʟ ᴋᴏᴍᴜᴛʟᴀʀɪ"
 H_B_3 : "✦  𝖪𝖺𝗇𝖺𝗅"
-H_B_4 : "✦  𝖮𝗐𝗇𝖾𝗋"
+H_B_4 : "✦  𝖲𝖺𝗁𝗂𝗉"
 H_B_5 : "• ᴍᴇɴᴜ̈"
 H_B_6 : "🪧 𝖲𝗎𝖽𝗈 𝖪𝗈𝗆𝗎𝗍𝗅𝖺𝗋ı"
 
