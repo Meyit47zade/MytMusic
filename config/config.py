@@ -8,14 +8,14 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", "26234320"))
-API_HASH = getenv("API_HASH", "782e0461d21d8fe6fad1d5a072127c9d")
+API_ID = int(getenv("API_ID", "16252145"))
+API_HASH = getenv("API_HASH", "3c235bfd4e64b31ee11a25e47802ad6b")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "6818189349:AAF0zbFx_KRY3umEPO5zSUHqlslBb9M62lg")
+BOT_TOKEN = getenv("BOT_TOKEN", "6858698085:AAEqsnHXTlqn4eoi4WQWyfhiSKebJztZUOQ")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ihsantopic:topicihsan@cluster0.jfejxle.mongodb.net/?retryWrites=true&w=majority")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://botrobin72:robin72@cluster0.ynhazzk.mongodb.net/?retryWrites=true&w=majority
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 DURATION_LIMIT_MIN = int(
@@ -31,11 +31,11 @@ SONG_DOWNLOAD_DURATION = int(
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001983841726"))
 
 # A name for your Music bot.
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "Yildiz Muzik")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "Yildiz Muzik Bot")
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "6811941116").split())
+    map(int, getenv("OWNER_ID", "6540285284").split())
 )  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -47,7 +47,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/MahmutAtes21/Music",
+    "https://github.com/MahmutAtes21/music1",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -129,7 +129,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(
 SET_CMDS = getenv("SET_CMDS", False)
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @YukkiStringBot
-STRING1 = getenv("STRING_SESSION", "BABbbQ6wmdHq4LklMqVWpUNXZj2GXrM1221psFFodv7n6Of2BmkyIJby2-8DRoONhWx4D3xwVyy4pUtqncSH7UUfxyrZCsaxtasBTwL5OVAEdwzsegYdI21hCjgc5vZ2EW7MhJPdOV3-ryP97-rfm0kMXf0HJy_jzAd8xuizEgiMww8ZB9Kx3Ry3p88LvIZ_KLfF3I2AtThAA_-NKne15AHI4xd9b3RobvcRr97QftRfIGUYIkPJ7t7TrBpggxJgi62i0mYx-KZxPV6dNlnHJCimZfJO5G6xSoMYxjA_HLyh8c0PEGlEs51f0fejfF6nI-g4UJhRGv1Ot59fj6h9PGKvAAAAAXjA0AQA")
+STRING1 = getenv("STRING_SESSION", "BACcdzqwmD-DgKMaoS27cESJtf5pICwWLXLEyq0WTRORUXgol5pspMTEkHVY5Ni7yvZGa-xA7EtwuY43hM95OLA9UhH4U_h1d0jVaSmvH6wtzk75Zu5_pWrZrACCAkJQJwNyHs0xD9_8d7rX4hZuq_T4UL_gew5DDy06fs7xL3J6d2Ci70E2L-VOzxvQDYhqxsJiF780G3TeZpR2QKVFQglhz_h53JJlANAD9EU4o-7W0is4TuQEfsPniDSZna3VVB8kICG71TyOsTUAmQWcPvAyvh5pjRM56gFyw7qHlLMM4lLKPB1WhpkDZTVLOtOvKt5xTXcsGpVwSLO9I2SbS83HAAAAAYBgT_oA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
