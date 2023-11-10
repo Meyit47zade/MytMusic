@@ -8,32 +8,22 @@ from pyrogram import filters
 load_dotenv()
 
 API_ID = int(getenv("API_ID", "16252145"))
-
 API_HASH = getenv("API_HASH", "3c235bfd4e64b31ee11a25e47802ad6b")
-
 BOT_TOKEN = getenv("BOT_TOKEN", "6858698085:AAH5-9xRytSr_Wz6O_ENAyhWEF8RK_5Si74")
-
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://botrobin72:robin72@cluster0.ynhazzk.mongodb.net/?retryWrites=true&w=majority")
-
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001983841726"))
-
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "Yildiz Muzik Bot")
-
+OWNERS = int(getenv("OWNERS", "6181368568"))
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "6540285284").split())
+    map(int, getenv("OWNER_ID", "6181368568").split())
 )
-
-OWNERS = int(getenv("OWNERS", "6540285284"))
-
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
     "https://github.com/MahmutAtes21/music1",
 )
-
 KANAL = getenv(
     "KANAL", "AikoCall"
 )
-
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "03052c5f8a324a58ad5cbb050b691d80")
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "2425bf87ba1f4a1fac3ae2e70eef2d39")
 
@@ -51,8 +41,8 @@ AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", "false")
 YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "3"))
 TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "10"))
-SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "30"))
-PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "25"))
+SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "50"))
+PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "50"))
 CLEANMODE_DELETE_MINS = int(
     getenv("CLEANMODE_MINS", "5")
 )
