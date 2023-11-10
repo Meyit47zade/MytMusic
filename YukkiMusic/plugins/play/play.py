@@ -215,7 +215,7 @@ async def play_commnd(
                 and not config.SPOTIFY_CLIENT_SECRET
             ):
                 return await mystic.edit_text(
-                    "This bot isn't able to play spotify queries. Please ask my owner to enable spotify."
+                    "Bu bot Spotify sorgularını oynatamıyor. Lütfen sahibimden Spotify'ı etkinleştirmesini isteyin ."
                 )
             if "track" in url:
                 try:
@@ -330,11 +330,11 @@ async def play_commnd(
                 await Yukki.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(
-                    "There's an issue with the bot. Please report it to my owner and ask them to check logger group."
+                    "Botla ilgili bir sorun var. Lütfen durumu sahibime bildirin ."
                 )
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    "Please turn on Voice Chat.. Bot is not able to stream urls..",
+                    "Lütfen Sesli Sohbeti açın. Bot URL'leri aktaramıyor.",
                 )
             except Exception as e:
                 return await mystic.edit_text(
