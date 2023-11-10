@@ -99,11 +99,6 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 text=_["S_B_5"],
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
-        ],
-        [
-            InlineKeyboardButton(
-                text=_["S_B_7"], url=f"tg://openmessage?user_id={OWNERS}"
-            )
         ]
     )
     if GITHUB_REPO and OWNER:
@@ -120,6 +115,14 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 [
                     InlineKeyboardButton(
                         text=_["S_B_6"], url=f"{GITHUB_REPO}"
+                    ),
+                ]
+            )
+        if OWNER:
+            buttons.append(
+                [
+                    InlineKeyboardButton(
+                        text=_["S_B_7"], user_id=OWNER
                     ),
                 ]
             )
