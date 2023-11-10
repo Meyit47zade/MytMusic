@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import os
 from random import randint
 from typing import Union
@@ -14,6 +5,7 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
+from YukkiMusic.utils import close_key
 from YukkiMusic import Carbon, YouTube, app
 from YukkiMusic.core.call import Yukki
 from YukkiMusic.misc import db
@@ -169,9 +161,8 @@ async def stream(
             position = len(db.get(chat_id)) - 1
             await app.send_message(
                 original_chat_id,
-                _["queue_4"].format(
-                    position, title[:30], duration_min, user_name
-                ),
+                _["queue_4"].format(position, title[:30], duration_min, user_name),
+              reply_markup=close_key,
             )
         else:
             if not forceplay:
@@ -221,9 +212,8 @@ async def stream(
             position = len(db.get(chat_id)) - 1
             await app.send_message(
                 original_chat_id,
-                _["queue_4"].format(
-                    position, title[:30], duration_min, user_name
-                ),
+                _["queue_4"].format(position, title[:30], duration_min, user_name),
+              reply_markup=close_key,
             )
         else:
             if not forceplay:
@@ -274,9 +264,8 @@ async def stream(
             position = len(db.get(chat_id)) - 1
             await app.send_message(
                 original_chat_id,
-                _["queue_4"].format(
-                    position, title[:30], duration_min, user_name
-                ),
+                _["queue_4"].format(position, title[:30], duration_min, user_name),
+              reply_markup=close_key,
             )
         else:
             if not forceplay:
@@ -329,9 +318,8 @@ async def stream(
             position = len(db.get(chat_id)) - 1
             await app.send_message(
                 original_chat_id,
-                _["queue_4"].format(
-                    position, title[:30], duration_min, user_name
-                ),
+                _["queue_4"].format(position, title[:30], duration_min, user_name),
+              reply_markup=close_key,
             )
         else:
             if not forceplay:
@@ -382,9 +370,8 @@ async def stream(
             )
             position = len(db.get(chat_id)) - 1
             await mystic.edit_text(
-                _["queue_4"].format(
-                    position, title[:30], duration_min, user_name
-                )
+                _["queue_4"].format(position, title[:30], duration_min, user_name),
+              reply_markup=close_key,
             )
         else:
             if not forceplay:
@@ -415,3 +402,4 @@ async def stream(
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
             await mystic.delete()
+      
