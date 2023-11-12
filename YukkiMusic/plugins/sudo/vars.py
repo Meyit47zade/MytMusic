@@ -2,6 +2,10 @@
 # Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 #
 # This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
+#
+# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
+#
+# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
 # and is released under the "GNU v3.0 License Agreement".
 # Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
 #
@@ -24,7 +28,7 @@ VARS_COMMAND = get_command("VARS_COMMAND")
 @app.on_message(filters.command(VARS_COMMAND) & SUDOERS)
 async def varsFunc(client, message):
     mystic = await message.reply_text(
-        "Please wait.. Getting your config"
+        "• Lütfen bekleyin .**"
     )
     v_limit = await get_video_limit()
     bot_name = config.MUSIC_BOT_NAME
@@ -40,69 +44,69 @@ async def varsFunc(client, message):
     cm = config.CLEANMODE_DELETE_MINS
     auto_sug = config.AUTO_SUGGESTION_TIME
     if config.AUTO_LEAVING_ASSISTANT == str(True):
-        ass = "Yes"
+        ass = "Evet"
     else:
-        ass = "No"
+        ass = "Hayır"
     if config.PRIVATE_BOT_MODE == str(True):
-        pvt = "Yes"
+        pvt = "Evet"
     else:
-        pvt = "No"
+        pvt = "Hayır"
     if config.AUTO_SUGGESTION_MODE == str(True):
-        a_sug = "Yes"
+        a_sug = "Evet"
     else:
-        a_sug = "No"
+        a_sug = "Hayır"
     if config.AUTO_DOWNLOADS_CLEAR == str(True):
-        down = "Yes"
+        down = "Evet"
     else:
-        down = "No"
+        down = "Hayır"
 
     if not config.GITHUB_REPO:
-        git = "No"
+        git = "Hayır"
     else:
-        git = f"[Repo]({config.GITHUB_REPO})"
+        git = f"[REPO]({config.GITHUB_REPO})"
     if not config.START_IMG_URL:
-        start = "No"
+        start = "Hayır"
     else:
-        start = f"[Image]({config.START_IMG_URL})"
+        start = f"[RESİM]({config.START_IMG_URL})"
     if not config.SUPPORT_CHANNEL:
-        s_c = "No"
+        s_c = "Hayır"
     else:
-        s_c = f"[Channel]({config.SUPPORT_CHANNEL})"
+        s_c = f"[KANAL]({config.SUPPORT_CHANNEL})"
     if not config.SUPPORT_GROUP:
-        s_g = "No"
+        s_g = "Hayır"
     else:
-        s_g = f"[Group]({config.SUPPORT_GROUP})"
+        s_g = f"[GRUP]({config.SUPPORT_GROUP})"
     if not config.GIT_TOKEN:
-        token = "No"
+        token = "Hayır"
     else:
-        token = "Yes"
+        token = "Evet"
     if (
         not config.SPOTIFY_CLIENT_ID
         and not config.SPOTIFY_CLIENT_SECRET
     ):
-        sotify = "No"
+        sotify = "Hayır"
     else:
-        sotify = "Yes"
+        sotify = "Hayır"
     owners = [str(ids) for ids in config.OWNER_ID]
     owner_id = " ,".join(owners)
     tg_aud = convert_bytes(config.TG_AUDIO_FILESIZE_LIMIT)
     tg_vid = convert_bytes(config.TG_VIDEO_FILESIZE_LIMIT)
-    text = f"""**MUSIC BOT CONFIG:**
+    text = f"""**MÜZİK BOT AYARLARI:**
 
-**<u>Basic Vars:</u>**
+**<u>Temel Değişken:</u>**
 `MUSIC_BOT_NAME` : **{bot_name}**
 `DURATION_LIMIT` : **{play_duration} min**
 `SONG_DOWNLOAD_DURATION_LIMIT` :** {song} min**
 `OWNER_ID` : **{owner_id}**
     
-**<u>Custom Repo Vars:</u>**
+**<u>Özel Repo Değişkeni:</u>**
 `UPSTREAM_REPO` : **{up_r}**
 `UPSTREAM_BRANCH` : **{up_b}**
 `GITHUB_REPO` :** {git}**
 `GIT_TOKEN `:** {token}**
 
 
-**<u>Bot Vars:</u>**
+**<u>Bot Değişkeni:</u>**
 `AUTO_LEAVING_ASSISTANT` : **{ass}**
 `ASSISTANT_LEAVE_TIME` : **{auto_leave} seconds**
 `AUTO_SUGGESTION_MODE` :** {a_sug}**
@@ -116,15 +120,15 @@ async def varsFunc(client, message):
 `SERVER_PLAYLIST_LIMIT` :** {playlist_limit}**
 `PLAYLIST_FETCH_LIMIT` :** {fetch_playlist}**
 
-**<u>Spotify Vars:</u>**
+**<u>Spotify Değişkeni:</u>**
 `SPOTIFY_CLIENT_ID` :** {sotify}**
 `SPOTIFY_CLIENT_SECRET` : **{sotify}**
 
-**<u>Playsize Vars:</u>**
+**<u>BOYUT DEĞİŞKENİ:</u>**
 `TG_AUDIO_FILESIZE_LIMIT` :** {tg_aud}**
 `TG_VIDEO_FILESIZE_LIMIT` :** {tg_vid}**
 
-**<u>URL Vars:</u>**
+**<u>BAĞLANTI DEĞİŞKENİ:</u>**
 `SUPPORT_CHANNEL` : **{s_c}**
 `SUPPORT_GROUP` : ** {s_g}**
 `START_IMG_URL` : ** {start}**
