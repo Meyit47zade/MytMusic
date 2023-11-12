@@ -37,9 +37,9 @@ async def activevc(_, message: Message):
             title = "Private Group"
         if (await app.get_chat(x)).username:
             user = (await app.get_chat(x)).username
-            text += f"<b>{j + 1} .</b>  [{title}](https://t.me/{user})ID) `{x}`\n"
+            text += f"<b>{j + 1} .  [{title}](https://t.me/{user})\nID) `{x}`</b>\n"
         else:
-            text += f"<b>{j + 1} .  {title}</b>\nID) `{x}`\n"
+            text += f"<b>{j + 1} .  {title}\nID) `{x}`</b>\n"
         j += 1
     if not text:
         await mystic.edit_text("Aktif Sesli Sohbet Yok")
@@ -66,9 +66,9 @@ async def activevi_(_, message: Message):
             title = "Private Group"
         if (await app.get_chat(x)).username:
             user = (await app.get_chat(x)).username
-            text += f"<b>{j + 1} .</b>  [{title}](https://t.me/{user})\nID) `{x}`\n"
+            text += f"<b>{j + 1} .  [{title}](https://t.me/{user})\nID) `{x}`</b>\n"
         else:
-            text += f"<b>{j + 1} .  {title}</b>\nID) `{x}`\n"
+            text += f"<b>{j + 1} .  {title}\nID) `{x}`</b>\n"
         j += 1
     if not text:
         await mystic.edit_text("Aktif Sesli Sohbet Yok")
