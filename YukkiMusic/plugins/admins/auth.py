@@ -158,7 +158,7 @@ async def authusers(client, message: Message, _):
                 j += 1
             except Exception:
                 continue
-            text += f"{j}➤ {user}[`{user_id}`]\n"
-            text += f"   {_['auth_8']} {admin_name}[`{admin_id}`]\n\n"
+            text += f"{j}) {user}\nID) `{user_id}`\n"
+            text += f"{_['auth_8']} {admin_name}\nID) `{admin_id}`\n\n"
         await mystic.delete()
         await message.reply_text(text,reply_markup=close_key,)
