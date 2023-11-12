@@ -12,6 +12,7 @@ async def play_logs(message, streamtype):
         logger_text = f"""**+ Grup : {message.chat.title} 
 + Grup ID : `{message.chat.id}`
 + Kullanıcı : {message.from_user.mention}
++ Kullanıcı Adı : @{message.from_user.username}
 + Kullanıcı ID : `{message.from_user.id}`
 + Grup Link : {chatusername}
 
