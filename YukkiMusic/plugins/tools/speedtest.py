@@ -8,6 +8,7 @@
 # All rights reserved.
 
 import asyncio
+import speedtest
 from YukkiMusic.utils import close_key
 from pyrogram import filters
 from strings import get_command
@@ -22,13 +23,13 @@ def testspeed(m):
     try:
         test = speedtest.Speedtest()
         test.get_best_server()
-        m = m.edit("Running Download SpeedTest")
+        m = m.edit("**İndirme Testini Çalıştırma .**")
         test.download()
-        m = m.edit("Running Upload SpeedTest")
+        m = m.edit("**Yükleme Testini Çalıştırma .**")
         test.upload()
         test.results.share()
         result = test.results.dict()
-        m = m.edit("Sharing SpeedTest Results")
+        m = m.edit("**SpeedTest Paylaşma .**")
     except Exception as e:
         return m.edit(e)
     return result
@@ -39,17 +40,16 @@ async def speedtest_function(client, message):
     m = await message.reply_text("Running Speed test")
     loop = asyncio.get_event_loop()
     result = await loop.run_in_executor(None, testspeed, m)
-    output = f"""**Speedtest Results**
+    output = f"""**Speedtest Sonuçları**
     
-<u>**Client:**</u>
-**ISP :** {result['client']['isp']}
-**Country :** {result['client']['country']}
+<u>**Müşteri :**</u>
+**Şirket :** {result['client']['isp']}
+**Ülke :** {result['client']['country']}
   
-<u>**Server:**</u>
-**Name :** {result['server']['name']}
-**Country:** {result['server']['country']}, {result['server']['cc']}
-**Sponsor:** {result['server']['sponsor']}
-**Latency:** {result['server']['latency']}  
+<u>**Sunucu :**</u>
+**İsim :** {result['server']['name']}
+**Ülke:** {result['server']['country']}, {result['server']['cc']}
+**Sponsor:** {result['server']['sponsor']} 
 **Ping:** {result['ping']}"""
     msg = await app.send_photo(
         chat_id=message.chat.id, 
