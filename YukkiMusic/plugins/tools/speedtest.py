@@ -37,7 +37,7 @@ def testspeed(m):
 
 @app.on_message(filters.command(SPEEDTEST_COMMAND) & SUDOERS)
 async def speedtest_function(client, message):
-    m = await message.reply_text("Running Speed test")
+    m = await message.reply_text("**Hız Testini Çalıştırma .**")
     loop = asyncio.get_event_loop()
     result = await loop.run_in_executor(None, testspeed, m)
     output = f"""**Speedtest Sonuçları**
@@ -48,9 +48,9 @@ async def speedtest_function(client, message):
   
 <u>**Sunucu :**</u>
 **İsim :** {result['server']['name']}
-**Ülke:** {result['server']['country']}, {result['server']['cc']}
-**Sponsor:** {result['server']['sponsor']} 
-**Ping:** {result['ping']}"""
+**Ülke :** {result['server']['country']}, {result['server']['cc']}
+**Sponsor :** {result['server']['sponsor']} 
+**Ping :** {result['ping']}"""
     msg = await app.send_photo(
         chat_id=message.chat.id, 
         photo=result["share"], 
