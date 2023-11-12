@@ -28,7 +28,7 @@ VARS_COMMAND = get_command("VARS_COMMAND")
 @app.on_message(filters.command(VARS_COMMAND) & SUDOERS)
 async def varsFunc(client, message):
     mystic = await message.reply_text(
-        "• Lütfen bekleyin .**"
+        "**~ Lütfen bekleyin .**"
     )
     v_limit = await get_video_limit()
     bot_name = config.MUSIC_BOT_NAME
@@ -95,8 +95,8 @@ async def varsFunc(client, message):
 
 **<u>Temel Değişken:</u>**
 `MUSIC_BOT_NAME` : **{bot_name}**
-`DURATION_LIMIT` : **{play_duration} min**
-`SONG_DOWNLOAD_DURATION_LIMIT` :** {song} min**
+`DURATION_LIMIT` : **{play_duration} dk**
+`SONG_DOWNLOAD_DURATION_LIMIT` :** {song} dk**
 `OWNER_ID` : **{owner_id}**
     
 **<u>Özel Repo Değişkeni:</u>**
@@ -108,15 +108,15 @@ async def varsFunc(client, message):
 
 **<u>Bot Değişkeni:</u>**
 `AUTO_LEAVING_ASSISTANT` : **{ass}**
-`ASSISTANT_LEAVE_TIME` : **{auto_leave} seconds**
+`ASSISTANT_LEAVE_TIME` : **{auto_leave} saniye**
 `AUTO_SUGGESTION_MODE` :** {a_sug}**
-`AUTO_SUGGESTION_TIME` : **{auto_sug} seconds**
+`AUTO_SUGGESTION_TIME` : **{auto_sug} saniye**
 `AUTO_DOWNLOADS_CLEAR` : **{down}**
 `PRIVATE_BOT_MODE` : **{pvt}**
-`YOUTUBE_EDIT_SLEEP` : **{yt_sleep} seconds**
-`TELEGRAM_EDIT_SLEEP` :** {tg_sleep} seconds**
-`CLEANMODE_MINS` : **{cm} mins**
-`VIDEO_STREAM_LIMIT` : **{v_limit} chats**
+`YOUTUBE_EDIT_SLEEP` : **{yt_sleep} saniye**
+`TELEGRAM_EDIT_SLEEP` :** {tg_sleep} saniye**
+`CLEANMODE_MINS` : **{cm} dk**
+`VIDEO_STREAM_LIMIT` : **{v_limit} Grup**
 `SERVER_PLAYLIST_LIMIT` :** {playlist_limit}**
 `PLAYLIST_FETCH_LIMIT` :** {fetch_playlist}**
 
