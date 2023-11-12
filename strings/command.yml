@@ -38,9 +38,9 @@ LYRICS_COMMAND : ["nxjdjd"]
 
 
 # Admin Commands
-AUTH_COMMAND : ["auth"]
-UNAUTH_COMMAND : ["unauth"]
-AUTHUSERS_COMMAND : ["authusers"]
+AUTH_COMMAND : ["ytver"]
+UNAUTH_COMMAND : ["ytal"]
+AUTHUSERS_COMMAND : ["ytlist"]
 PAUSE_COMMAND : ["pause", "cpause", "durdur"]
 RESUME_COMMAND : ["resume", "cresume", "devam"]
 MUTE_COMMAND : ["ghgye"]
@@ -101,7 +101,7 @@ UNBLOCK_COMMAND : ["unblock"]
 BLOCKED_COMMAND : ["blocklist"]
 
 #sPEEDTEST
-SPEEDTEST_COMMAND : ["hiztest"]
+SPEEDTEST_COMMAND : ["speedtest"]
 
 #Voice chat commands
 ACTIVEVC_COMMAND : ["activevoice"]
