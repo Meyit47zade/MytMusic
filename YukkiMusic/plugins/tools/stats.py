@@ -49,7 +49,7 @@ STATS_COMMAND = get_command("STATS_COMMAND")
     filters.command(STATS_COMMAND)
     & filters.group
     & ~filters.edited
-    & filters.user(OWNER_ID)
+    & SUDOERS
 )
 @language
 async def stats_global(client, message: Message, _):
@@ -67,7 +67,7 @@ async def stats_global(client, message: Message, _):
     filters.command(GSTATS_COMMAND)
     & filters.group
     & ~filters.edited
-    & filters.user(OWNER_ID)
+    & SUDOERS
 )
 @language
 async def gstats_global(client, message: Message, _):
