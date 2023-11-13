@@ -24,6 +24,9 @@ UPSTREAM_REPO = getenv(
 KANAL = getenv(
     "KANAL", "AikoCall"
 )
+GRUP = getenv(
+    "GRUP", "BotsDestek"
+)
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "03052c5f8a324a58ad5cbb050b691d80")
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "2425bf87ba1f4a1fac3ae2e70eef2d39")
 
