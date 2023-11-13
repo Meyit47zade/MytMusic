@@ -135,10 +135,7 @@ gstats_7 : "Bu sohbet grubu şu ana kadar **{1}** gibi çok sayıda parçayla **
 gstats_8 : "Bot'un genel istatistiklerini ve bilgilerini almak.. Bu biraz zaman alabilir..."
 gstats_9 : "**BOT'UN KÜRESEL İSTATİSTİKLERİ**\n\nAşağıdan bot sunucularından genel istatistikleri kontrol etmek istediğiniz düğmeleri seçin."
 gstats_10 : "**Küresel İstatistikler {0}**\n\nBot sunucularından genel istatistikleri kontrol etmek istediğiniz düğmeleri aşağıdan seçin."
-gstats_11 : "**Genel İstatistikler {0}**\nBot sunucularından genel istatistikleri kontrol etmek istediğiniz düğmeleri aşağıdan seçin ."
-
-
-# Play 
+gstats_11 : "**Genel İstatistikler {0}**\nBot sunucularından genel istatistikleri kontrol etmek istediğiniz düğmeleri aşağıdan seçin ." 
 
 #Play Callback 
 playcb_1 : "Hey! Kendi Şarkını Ara."
@@ -206,8 +203,6 @@ str_3 : "Youtube canlı yayın akışı yapılamıyor. Canlı Biçim Bulunamadı
 tracks_1 : "**{0} En İyi 10 Oynatma Listesi işleniyor**\n\n**🎯 ᴛᴀʟᴇᴘ :** {1}\n📢**Kanal Oynatma:** {2}\n\n /stats'a göre En İyi 10 parçayı kontrol edin"
 tracks_2 : "**Hata**\n\nBot'un sunucularında **{0} En İyi 10 Oynatma Listesi** yok. Lütfen başka bir oynatma listesi deneyin"
 
-# TOOLS
-
 #Lyrics
 lyrics_1 : "**Kullanım:**\n\n/lyrics [ Şarkı Adı ]"
 lyrics_2 : "~ **Şarkı Sözlerini Arıyorum **"
@@ -215,22 +210,22 @@ lyrics_3 : "**Şarkı sözleri getirilemedi.**\n\n**Aramaya çalışıldı:** {0
 lyrics_4 : "**• Aşağıdaki Butona Tıklayın ...**"
 
 #Ping
-ping_1 : "Ping!!!!"
-ping_2 : "{0}, `{1}` ms'lik bir ping ile iyi çalışıyor.\n\nBot'un çalışma süresi {2} ve toplam {3} sunucunun depolama alanını kullandı. CPU yükü, {5} Ram tüketimiyle yaklaşık {4}'dir. Py-Tgcalls istemcisi de ."
+ping_1 : "**~ Ping Yükleniyor ...**"
+ping_2 : "**Bot İsmi : {0}\nGecikme : {1}\nÇalışma süresi : {2}\nTükettiği Depolama : {3}\nRam tüketimi : {4}\nCPU yükü : {5}**"
 
 
 # Song
 song_1 : "• **Müzik veya Video İndirmek için aşağıdaki butona tıklayın .**"
 song_2 : "**Kullanım :**\n\n/bul [Şarkı]"
-song_3 : "Canlı Bağlantı Algılandı. Canlı youtube videolarını indiremiyorum. "
+song_3 : "**Canlı Bağlantı Algılandı. Canlı youtube videolarını indiremiyorum. **"
 song_4 : "**📝 ʙᴀşʟɪᴋ :**- {0}\n\nİndirmek istediğiniz türü seçin."
-song_5 : "Geçerli bir Youtube Bağlantısı değil"
+song_5 : "**Geçerli bir Youtube Bağlantısı değil .**"
 song_6 : "Format Alınıyor... \n\nLütfen Bekleyin..."
 song_7 : "Video için kullanılabilir biçimler alınamadı. Lütfen başka bir parça deneyin."
-song_8 : "İndirme Başladı\n\nİndirme hızı yavaş olabilir. Lütfen bekleyin.."
-song_9 : "YouTubeden şarkı indirilemedi\n\n**Nedeni:** {0}"
-song_10 : "Sunuculardan telegrama yüklenemedi."
-song_11 : "Yükleme Başladı\n\nYükleme hızı yavaş olabilir. Lütfen bekleyin.."
+song_8 : "**İndirme Başladı\n\nİndirme hızı yavaş olabilir. Lütfen bekleyin.**"
+song_9 : "**YouTubeden şarkı indirilemedi\n\nNedeni:** {0}"
+song_10 : "**Sunuculardan telegrama yüklenemedi.**"
+song_11 : "**Yükleme Başladı\n\nYükleme hızı yavaş olabilir. Lütfen bekleyin.**"
 
 # Tools - Queue
 queue_1 : "✦ **Lütfen Bekleyin...**"
