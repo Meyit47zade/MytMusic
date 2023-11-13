@@ -1,6 +1,6 @@
 import random
 
-from config import OWNER_ID, OWNERS, KANAL
+from config import OWNER_ID, OWNERS, KANAL, GRUP
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -72,7 +72,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=_["H_B_4"], url=f"tg://openmessage?user_id={OWNERS}"
+                text=_["H_B_7"], url=f"https://t.me/{GRUP}"
             ),
         ],
         [
@@ -130,7 +130,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 text=_["S_B_4"], url=f"https://t.me/{KANAL}"
             ),
             InlineKeyboardButton(
-                text=_["S_B_7"], url=f"tg://openmessage?user_id={OWNERS}"
+                text=_["S_B_9"], url=f"https://t.me/{GRUP}"
             )
         ],
         [
@@ -191,7 +191,7 @@ def stream_markup(_, videoid, chat_id):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=_["H_B_4"], url=f"tg://openmessage?user_id={OWNERS}"
+                text=_["H_B_7"], url=f"https://t.me/{GRUP}"
             ),
         ],
         [
@@ -248,7 +248,7 @@ def telegram_markup(_, chat_id):
                 text=_["S_B_4"], url=f"https://t.me/{KANAL}"
             ),
             InlineKeyboardButton(
-                text=_["S_B_7"], url=f"tg://openmessage?user_id={OWNERS}"
+                text=_["S_B_9"], url=f"https://t.me/{GRUP}"
             )
         ],
         [
