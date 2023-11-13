@@ -24,7 +24,7 @@ from YukkiMusic.utils.decorators.language import language
 ###Commands
 LYRICS_COMMAND = get_command("LYRICS_COMMAND")
 
-api_key = "Vd9FvPMOKWfsKJNG9RbZnItaTNIRFzVyyXFdrGHONVsGqHcHBoj3AI3sIlNuqzuf0ZNG8uLcF9wAd5DXBBnUzA"
+api_key = "PierR-oNNw9tboAn89A9FhbC_boliY9QCuocfcG3QF9OciRtimhp4a6Fnne5lBrm"
 y = lg.Genius(
     api_key,
     skip_non_songs=True,
