@@ -27,12 +27,12 @@ HELP_1 = """✅ <u>𝖬𝗎̈𝗓𝗂𝗄 𝖪𝗈𝗆𝗎𝗍𝗅𝖺𝗋 :</u>
 » /deleteplaylist > 𝖯𝗅𝖺𝗒𝗅𝗂𝗌𝗍𝗂𝗇𝗂𝗓𝗂 𝖲𝗂𝗅𝖾𝗋 .
 » /restart > 𝖡𝗈𝗍𝗎 𝖸𝖾𝗇𝗂𝖽𝖾𝗇 𝖡𝖺𝗌̧𝗅𝖺𝗍ı𝗋.
 » /reload > 𝖠𝖽𝗆𝗂𝗇 𝖫𝗂𝗌𝗍𝖾𝗌𝗂𝗇𝗂 𝖦𝗎𝗇𝖼𝖾𝗅𝗅𝖾 .
-» /ytver > 𝖪𝗎𝗅𝗅𝖺𝗇ı𝖼ı𝗒𝖺 𝖸𝖾𝗍𝗄𝗂 𝖵𝖾𝗋𝗂𝗋 .
-» /ytal > 𝖪𝗎𝗅𝗅𝖺𝗇ı𝖼ı 𝖸𝖾𝗍𝗄𝗂𝗌𝗂𝗇𝗂 𝖠𝗅ı𝗋 .
-» /ytlist > 𝖸𝖾𝗍𝗄𝗂𝗅𝗂 𝖪𝗎𝗅𝗅𝖺𝗇ı𝖼ı𝗅𝖺𝗋ı 𝖦𝗈̈𝗌𝗍𝖾𝗋𝗂𝗋 .
+» /auth > 𝖪𝗎𝗅𝗅𝖺𝗇ı𝖼ı𝗒𝖺 𝖸𝖾𝗍𝗄𝗂 𝖵𝖾𝗋𝗂𝗋 .
+» /unauth > 𝖪𝗎𝗅𝗅𝖺𝗇ı𝖼ı 𝖸𝖾𝗍𝗄𝗂𝗌𝗂𝗇𝗂 𝖠𝗅ı𝗋 .
+» /authlist > 𝖸𝖾𝗍𝗄𝗂𝗅𝗂 𝖪𝗎𝗅𝗅𝖺𝗇ı𝖼ı𝗅𝖺𝗋ı 𝖦𝗈̈𝗌𝗍𝖾𝗋𝗂𝗋 .
 
 ~ 𝖭𝗈𝗍 : 𝖠𝗌̧𝖺𝗀̆ı𝖽𝖺𝗄𝗂 𝗄𝗈𝗆𝗎𝗍𝗅𝖺𝗋 𝗌𝖺𝗒𝖾𝗌𝗂𝗇𝖽𝖾 𝗀𝗋𝗎𝖻𝗎𝗇𝗎𝗓𝖽𝖺𝗄𝗂 𝗄𝗎𝗅𝗅𝖺𝗇ı𝖼ı𝗅𝖺𝗋, 𝗒𝗈̈𝗇𝖾𝗍𝗂𝖼𝗂 𝗈𝗅𝗆𝖺𝖽𝖺𝗇 𝖽𝖺 [ 𝗈𝗒𝗇𝖺𝗍, 𝖽𝗎𝗋𝖽𝗎𝗋, 𝖽𝖾𝗏𝖺𝗆, 𝖺𝗍𝗅𝖺, 𝗌𝗈𝗇 𝗏𝖻. ] 𝗄𝗈𝗆𝗎𝗍𝗅𝖺𝗋ı𝗇ı 𝗄𝗎𝗅𝗅𝖺𝗇𝖺𝖻𝗂𝗅𝗂𝗋 !
-[ /ytver , /ytal , /ytlist ]
+[ /auth , /unauth , /authlist ]
 """
 
 HELP_2 = """✅ <u>𝖪𝖺𝗇𝖺𝗅 𝖮𝗒𝗇𝖺𝗍𝗆𝖺 :</u>
@@ -74,9 +74,9 @@ HELP_5 = """** 🔰<u>Sudo Komutlar :</u>
 » /logger  -> [ log grubu içindir ]
 » /vars  -> [ bottan detayli bilgi verir ]
 » /limit -> [ video limiti ayarlar ]
-» /blacklistchat  -> [ grubu yasaklar ]
-» /whitelistchat -> [ grub yasağı kaldırır ]
-» /blacklistedchat [ yasaklı listeyi gösterir ]
+» /blockchat  -> [ grubu yasaklar ]
+» /unblockchat -> [ grub yasağı kaldırır ]
+» /blockchatlist [ yasaklı listeyi gösterir ]
 » /activevoice  -> [ aktif sesli gruplar ]
 » /activevideo  -> [ aktif videolu gruplar ]
 » /block  -> [ kullanıcıyı Yasaklar ]
