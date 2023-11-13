@@ -38,9 +38,9 @@ LYRICS_COMMAND : ["nxjdjd"]
 
 
 # Admin Commands
-AUTH_COMMAND : ["ytver"]
-UNAUTH_COMMAND : ["ytal"]
-AUTHUSERS_COMMAND : ["ytlist"]
+AUTH_COMMAND : ["auth"]
+UNAUTH_COMMAND : ["unauth"]
+AUTHUSERS_COMMAND : ["authlist"]
 PAUSE_COMMAND : ["pause", "cpause", "durdur"]
 RESUME_COMMAND : ["resume", "cresume", "devam"]
 MUTE_COMMAND : ["ghgye"]
@@ -64,16 +64,16 @@ CLEAN_COMMAND : ["clean"]
 BROADCAST_COMMAND : ["broadcast", "reklam"]
 
 #Blacklist chat
-BLACKLISTCHAT_COMMAND : ["blacklistchat"]
-WHITELISTCHAT_COMMAND : ["whitelistchat"]
-BLACKLISTEDCHAT_COMMAND : ["blacklistedchat"]
+BLACKLISTCHAT_COMMAND : ["blockchat"]
+WHITELISTCHAT_COMMAND : ["unblockchat"]
+BLACKLISTEDCHAT_COMMAND : ["blockchatlist"]
 
 # Video Calls Command
 VIDEOLIMIT_COMMAND : ["limit"]
 VIDEOMODE_COMMAND : ["nznsjs"]
 
 #Mantenance
-MAINTENANCE_COMMAND : ["maintenance"]
+MAINTENANCE_COMMAND : ["bakim"]
 LOGGER_COMMAND : ["logger"]
 
 #Heroku
@@ -86,7 +86,7 @@ VARS_COMMAND : ["vars"]
 
 
 #Basic Bot Commands
-UPDATE_COMMAND : ["update"]
+UPDATE_COMMAND : ["guncelle"]
 REBOOT_COMMAND : ["reboot"]
 AUTOEND_COMMAND : ["snsj"]
 
