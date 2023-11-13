@@ -32,16 +32,14 @@ LOOP_COMMAND = get_command("LOOP_COMMAND")
 async def admins(cli, message: Message, _, chat_id):
     usage = _["admin_24"]
     if len(message.command) != 2:
-        return await message.reply_text(usage,reply_markup=close_key,)
+        return await message.reply_text(usage, reply_markup=close_key,)
     state = message.text.split(None, 1)[1].strip()
-    if state.isnumeric():
+    if state.isdigit():
         state = int(state)
-        if 1 <= state <= 10:
+        if 1 <= state <= 50:
             got = await get_loop(chat_id)
             if got != 0:
                 state = got + state
-            if int(state) > 10:
-                state = 10
             await set_loop(chat_id, state)
             return await message.reply_text(
                 _["admin_25"].format(
@@ -52,9 +50,9 @@ async def admins(cli, message: Message, _, chat_id):
         else:
             return await message.reply_text(_["admin_26"])
     elif state.lower() == "enable":
-        await set_loop(chat_id, 10)
+        await set_loop(chat_id, 50)
         return await message.reply_text(
-            _["admin_25"].format(message.from_user.first_name, 10),
+            _["admin_25"].format(message.from_user.first_name, 50),
         reply_markup=close_key,
         )
     elif state.lower() == "disable":
@@ -62,3 +60,4 @@ async def admins(cli, message: Message, _, chat_id):
         return await message.reply_text(_["admin_27"])
     else:
         return await message.reply_text(usage)
+      
