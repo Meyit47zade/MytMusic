@@ -209,11 +209,10 @@ tracks_2 : "**Hata**\n\nBot'un sunucularında **{0} En İyi 10 Oynatma Listesi**
 # TOOLS
 
 #Lyrics
-lyrics_1 : "**Kullanım:**\n\n/lyrics [ Şarkı ADı]"
-lyrics_2 : "Şarkı Sözleri Arama"
-lyrics_3 : "❌ Şarkı sözleri getirilemedi😭.\n\n💡**Aramaya çalışıldı:** {0}"
-lyrics_5 :
-lyrics_4 : "Uzun spam türlerinde şarkı sözü aramasından kaçınmak için aşağıdaki düğmeyi tıklayın ve aranılan şarkı sözlerini alın."
+lyrics_1 : "**Kullanım:**\n\n/lyrics [ Şarkı Adı ]"
+lyrics_2 : "~ **Şarkı Sözlerini Arıyorum **"
+lyrics_3 : "**Şarkı sözleri getirilemedi.**\n\n**Aramaya çalışıldı:** {0}"
+lyrics_4 : "**• Aşağıdaki Butona Tıklayın ...**"
 
 #Ping
 ping_1 : "Ping!!!!"
@@ -254,7 +253,7 @@ BACK_BUTTON : "⬅ ɢᴇʀɪ"
 UNBAN_BUTTON : "🗑 ᴀsɪsᴛᴀɴ ʙᴀɴɪ ᴋᴀʟᴅɪʀ"
 
 #Lyrics
-L_B_1 : "🚀 Şarkı Sözlerini Şimdi Kontrol Et"
+L_B_1 : "🚀 Şarkı Sözlerini Kontrol Et"
 
 # Start
 S_B_1 : "📚 𝖪𝗈𝗆𝗎𝗍𝗅𝖺𝗋"
