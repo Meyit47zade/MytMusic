@@ -11,7 +11,7 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from config import OWNER_ID, OWNERS, KANAL
+from config import OWNER_ID, OWNERS, KANAL, GRUP
 
 from YukkiMusic import app
 
@@ -88,7 +88,7 @@ def private_help_panel(_):
                 text=_["S_B_4"], url=f"https://t.me/{KANAL}"
             ),
             InlineKeyboardButton(
-                text=_["S_B_7"], url=f"tg://openmessage?user_id={OWNERS}"
+                text=_["S_B_9"], url=f"https://t.me/{GRUP}"
             )
         ],
     ]
