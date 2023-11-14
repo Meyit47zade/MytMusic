@@ -19,7 +19,7 @@ OWNER_ID = list(
 )
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/MscBots/Yildiz",
+    "https://github.com/MahmutAtes21/Yildiz",
 )
 KANAL = getenv(
     "KANAL", "AikoCall"
