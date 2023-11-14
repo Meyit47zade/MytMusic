@@ -365,14 +365,14 @@ block_6 : "Engellenen Kullanıcılar Listesi Alınıyor."
 block_7 : "**Engellenmiş kullanıcılar:**\n\n"
 
 #Blacklist Chats
-black_1 : "**Kullanım:**\n/blacklistchat [CHAT_ID]"
+black_1 : "**Kullanım:**\n/blockchat [CHAT_ID]"
 black_2 : "Sohbet zaten kara listeye alındı."
 black_3 : "Sohbet başarıyla kara listeye alındı"
-black_4 : "**Kullanım:**\n/whitelistchat [CHAT_ID]"
-black_5 : "Sohbet zaten beyaz listede."
-black_6 : "Sohbet başarıyla beyaz listeye alındı"
+black_4 : "**Kullanım:**\n/unblockchat [CHAT_ID]"
+black_5 : "**Sohbet zaten kara listeden çıkartıldı .**"
+black_6 : "**Sohbet başarıyla kara listeden çıkartıldı .**"
 black_7 : "**Kara Listeye Alınmış Sohbetler:**\n\n"
-black_8 : "Kara Listeye Alınmış Sohbet Yok"
+black_8 : "**Kara Listeye Alınmış Sohbet Yok .**"
 
 #videolimit
 vid_1 : "**Kullanım:**\n/limit [İzin verilen sohbet sayısı] veya [Disable]"
@@ -381,7 +381,7 @@ vid_3 : "Görüntülü Görüşmelerin Maksimum Sınırı, {0} Sohbet İçin Tan
 vid_4 : "Görüntülü Görüşmeler Devre Dışı"
 
 #maintenance
-maint_1 : "**Kullanım:**\n/maintenance [enable|disable]"
+maint_1 : "**Kullanım:**\n/bakim [enable|disable]"
 maint_2 : "Bakım için Etkinleştirildi"
 maint_3 : "Bakım Modu Devre Dışı"
 
