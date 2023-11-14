@@ -187,8 +187,8 @@ playlist_13 : "**Tüm çalma listelerinizi sunucudan silindi.**"
 playlist_14 : "**Tüm oynatma listenizi silmek istediğinizden emin misiniz?\n\nÇalma listenizi kaybedeceksiniz ve bu daha sonra kurtarılamaz.**"
 playlist_15 : "[Tüm Oynatma Listesini Kontrol Et]({0})"
 playlist_16 : "Sıraya Alınmış Oynatma Listesi:"
-playlist_17 : "Sıradaki Pozisyon-"
-playlist_18 : "[Tüm Sıradaki Oynatma Listesini Kontrol Et]({0})\n\nSon Sıradaki Pozisyon : **{1}**"
+playlist_17 : "Sıradaki Pozisyon -"
+playlist_18 : "**Sıradaki Çalma Listelerim : [Tıkla]({0})\nSıradaki Pozisyon : {1}**"
 
 #Playmode
 playmode_1 : "Grubunuzdaki sorguları oynatmak istediğiniz modu seçin[{0}]."
