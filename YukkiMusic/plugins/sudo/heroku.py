@@ -247,7 +247,7 @@ async def update_(client, message, _):
     ):
         verification = str(checks.count())
     if verification == "":
-        return await response.edit("Bot is up-to-date!")
+        return await response.edit("Bot güncel !")
     updates = ""
     ordinal = lambda format: "%d%s" % (
         format,
@@ -267,7 +267,7 @@ async def update_(client, message, _):
     if len(_final_updates_) > 4096:
         url = await Yukkibin(updates)
         nrs = await response.edit(
-            f"<b>A new update is available for the Bot!</b>\n\n➣ Pushing Updates Now</code>\n\n**<u>Updates:</u>**\n\n[Click Here to checkout Updates]({url})"
+            f"<b>Bot için yeni bir güncelleme mevcut!</b>\n\n➣ Güncellemeler Şimdi Aktarılıyor</code>\n\n**<u>Güncellemeler:</u>**\n\n[ Ödeme Güncellemeleri ]({url})"
         )
     else:
         nrs = await response.edit(
@@ -346,6 +346,6 @@ async def restart_(_, message):
     except:
         pass
     await response.edit(
-        "Reboot has been initiated successfully! Wait for 1 - 2 minutes until the bot restarts."
+        "✦ Bot yeniden başlatılıyor !\n✦ 60 Saniye Sonra Müziğe Devam !**"
     )
     os.system(f"kill -9 {os.getpid()} && bash start")
