@@ -11,11 +11,10 @@ async def play_logs(message, streamtype):
             chatusername = "Gizli Grup"
         logger_text = f"""**+ Grup : {message.chat.title} 
 + Grup ID : `{message.chat.id}`
-+ Grup Link : {chatusername}
-+ Üye Sayısı : `{message.chat.members_count}`
 + Kullanıcı : {message.from_user.mention}
 + Kullanıcı Adı : @{message.from_user.username}
 + Kullanıcı ID : `{message.from_user.id}`
++ Grup Link : {chatusername}
 
 ✦ Aranan : `{message.text}`**"""
         if message.chat.id != LOG_GROUP_ID:
