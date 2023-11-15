@@ -22,7 +22,7 @@ UPSTREAM_REPO = getenv(
     "https://github.com/MahmutAtes21/Yildiz",
 )
 KANAL = getenv(
-    "KANAL", "AikoCall"
+    "KANAL", "BotsDuyuru"
 )
 GRUP = getenv(
     "GRUP", "BotsDestek"
