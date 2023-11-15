@@ -73,7 +73,7 @@ async def all_chats(client, message: Message, _):
         except Exception:
             title = "Private"
         j = 1
-        text += f"{count}. {title}\nID) `{chat_id}`\n"
+        text += f"{count} . {title}\nID) `{chat_id}`\n"
     if j == 0:
         await message.reply_text(_["black_8"])
     else:
