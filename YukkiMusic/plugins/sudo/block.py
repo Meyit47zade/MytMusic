@@ -88,16 +88,16 @@ async def sudoers_list(client, message: Message, _):
     mystic = await message.reply_text(_["block_6"])
     msg = _["block_7"]
     count = 0
-    for users in BANNED_USERS:
+    for user_id in BANNED_USERS:
         try:
-            user = await app.get_users(users)
+            user = await app.get_users(user_id)
             user = (
                 user.first_name if not user.mention else user.mention
             )
             count += 1
         except Exception:
             continue
-        msg += f"{count}➤ {user}\n"
+        msg += f"{count}. `{user}`\nID) `{user_id}`\n"
     if count == 0:
         return await mystic.edit_text(_["block_5"])
     else:
