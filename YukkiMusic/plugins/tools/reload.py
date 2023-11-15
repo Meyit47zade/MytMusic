@@ -65,7 +65,7 @@ async def reload_admin_cache(client, message: Message, _):
 @AdminActual
 async def restartbot(client, message: Message, _):
     mystic = await message.reply_text(
-        f"⏳ **Lütfen Bekleyin , Yeniden başlatılıyor...**"
+        f"⏳ **Lütfen Bekleyin , Yeniden başlatılıyor !**"
     )
     await asyncio.sleep(1)
     try:
@@ -85,7 +85,7 @@ async def restartbot(client, message: Message, _):
         except:
             pass
     return await mystic.edit_text(
-        "**♻️ Bot yeniden başlatıldı ...\n♻️ Önbellek Temizlendi ...**",
+        "**✦ Bot yeniden başlatıldı !\n✦ Önbellek Temizlendi !**",
     reply_markup=close_key,
     )
 
