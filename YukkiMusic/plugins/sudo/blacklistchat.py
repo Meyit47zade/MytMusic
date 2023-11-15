@@ -39,7 +39,7 @@ async def blacklist_chat_func(client, message: Message, _):
     if blacklisted:
         await message.reply_text(_["black_3"],reply_markup=close_key,)
     else:
-        await message.reply_text("Something wrong happened.")
+        await message.reply_text("Ters şeyler oldu.")
     try:
         await app.leave_chat(chat_id)
     except:
@@ -57,7 +57,7 @@ async def white_funciton(client, message: Message, _):
     whitelisted = await whitelist_chat(chat_id)
     if whitelisted:
         return await message.reply_text(_["black_6"],reply_markup=close_key,)
-    await message.reply_text("Something wrong happened.")
+    await message.reply_text("Ters şeyler oldu.")
 
 
 @app.on_message(
@@ -73,7 +73,7 @@ async def all_chats(client, message: Message, _):
         except Exception:
             title = "Private"
         j = 1
-        text += f"**{count}. {title}** [`{chat_id}`]\n"
+        text += f"{count}. {title}\nID) `{chat_id}`\n"
     if j == 0:
         await message.reply_text(_["black_8"])
     else:
