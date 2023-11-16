@@ -9,17 +9,17 @@ load_dotenv()
 
 API_ID = int(getenv("API_ID", "26234320"))
 API_HASH = getenv("API_HASH", "782e0461d21d8fe6fad1d5a072127c9d")
-BOT_TOKEN = getenv("BOT_TOKEN", "6818189349:AAF0zbFx_KRY3umEPO5zSUHqlslBb9M62lg")
+BOT_TOKEN = getenv("BOT_TOKEN", "https://telegra.ph/file/06e1f840ebbe0fb19f127.jpg")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ihsantopic:topicihsan@cluster0.jfejxle.mongodb.net/?retryWrites=true&w=majority")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001983841726"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "Yildiz Muzik Bot")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "Spotify Bot")
 OWNERS = int(getenv("OWNERS", "6811941116"))
 OWNER_ID = list(
     map(int, getenv("OWNER_ID", "6811941116").split())
 )
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/MahmutAtes21/Yildiz",
+    "https://github.com/YildizAtes21/Spotify",
 )
 KANAL = getenv(
     "KANAL", "BotsDuyuru"
@@ -30,8 +30,8 @@ GRUP = getenv(
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "03052c5f8a324a58ad5cbb050b691d80")
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "2425bf87ba1f4a1fac3ae2e70eef2d39")
 
-STRING1 = getenv("STRING_SESSION", "BACRQK2QmihKo_QLizvuX9-VL52SXNU8XQ6w-lhwictr7f2fNpDJ3OWnxHOxA1iJYR0HTqEH0t-dNK27YfE0KttyLNMr6YrHPMVA1WgE1gNV_ZxYLSyXRDGEGSA7GCuuvmENmnTuzDs3ki3uiVN7eXkRk6ptJ-Z4cLtIDDvVogSzGs912M-n-kEkASCwB9AGySV10uNLhz-G-XikXPJsJVrhNjqil3msZyMnALd764lFtaXItBQJbgIDOKKj2mU7ua7uIoOcepFnDv_YDsHHjpNxXabyXF1f2zTE9BQ97EtOfjrvm9M0TUalZxqgpSRIyPBpMnPeluv0Od0GQMUwWdHjAAAAAXjA0AQA")
-STRING2 = getenv("STRING_SESSION2", "BADC3FboJcQrsezkDRmoDuIgqlPEmW6N4-MQkulCLjS06Vp7S9aqneoolTCBwwto1IgpRR68c2xe7VDumj7nSbk0Bn1j7LeDc8faHNwQfF-3xG2lIFVoLfc2e6m8tMlK4lt8kvbQakfun8IwbNP3_8I2US65yUqRdAvpEElr1kBeuWi9n0QeugzVR9A3D6gmruWFKzk5k69K_UJqg2Lc7VrBENH0wCX-DvEZocyrB0n-Igl-mtfyUEpS_yEW7q2kxdncee8oTyqwpVAnPExc89CK-A4x7zzE0k4fueAfQjRyNoaBYkW-Z8EUTNQ6tdEuBVNwnrAqOY9znT749tjbvaOdAAAAAYu5nlkA")
+STRING1 = getenv("STRING_SESSION", "")
+STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
