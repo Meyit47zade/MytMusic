@@ -330,7 +330,7 @@ async def restart_(_, message):
         try:
             await app.send_message(
                 x,
-                f"{config.MUSIC_BOT_NAME} has just restarted herself. Sorry for the issues.\n\nStart playing after 10-15 seconds again.",
+                f"**✦ Bot yeniden başlatılıyor !\n✦ Önbellek Temizleniyor !**",
             )
             await remove_active_chat(x)
             await remove_active_video_chat(x)
@@ -346,6 +346,6 @@ async def restart_(_, message):
     except:
         pass
     await response.edit(
-        "✦ Bot yeniden başlatılıyor !\n✦ 60 Saniye Sonra Müziğe Devam !**"
+        "**✦ Bot yeniden başlatılıyor !\n✦ Önbellek Temizleniyor !**"
     )
     os.system(f"kill -9 {os.getpid()} && bash start")
