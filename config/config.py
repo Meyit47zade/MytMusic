@@ -7,8 +7,8 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = int(getenv("API_ID", "26234320"))
-API_HASH = getenv("API_HASH", "782e0461d21d8fe6fad1d5a072127c9d")
+API_ID = int(getenv("API_ID", "16252145"))
+API_HASH = getenv("API_HASH", "3c235bfd4e64b31ee11a25e47802ad6b")
 BOT_TOKEN = getenv("BOT_TOKEN", "6907624117:AAHIU98IN3gWgcCQYrlXjxTp7v2B4pmjr5s")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ihsantopic:topicihsan@cluster0.jfejxle.mongodb.net/?retryWrites=true&w=majority")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001983841726"))
@@ -30,7 +30,7 @@ GRUP = getenv(
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "03052c5f8a324a58ad5cbb050b691d80")
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "2425bf87ba1f4a1fac3ae2e70eef2d39")
 
-STRING1 = getenv("STRING_SESSION", "")
+STRING1 = getenv("STRING_SESSION", "BAC_BZAWqVsSIA1X2QjQodLzrmQBs3T4pC1YcKl9Pfqii-wFr8fX5a2xyNDoeAgnYRBzANDtQT8Xc9Kd0d15GvRRbfsc3N32iLxwHHckkcf8e57UpkSalmfiTjHOUiA-iLU44289RMQfmbULT6nsCxR4G-XhUz44Kq-25oIbfV4IsBV04hUtp3QRDlja-GKKZNGkYAKqiyyjA9Qu95INkw8Oleu8H6UpqmHqwPPTag68yP6-eFXAa1SzDYKatdbbQynFGotTt-pxoRU0-kk4YB5y594Rt3UfTrEiktH1v3degL91a5cN4YoIhkVPgERbl20KVaITYe9rjlYaStGycFpAAAAAAYBgT_oA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
