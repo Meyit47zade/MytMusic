@@ -9,7 +9,7 @@ load_dotenv()
 
 API_ID = int(getenv("API_ID", "26234320"))
 API_HASH = getenv("API_HASH", "782e0461d21d8fe6fad1d5a072127c9d")
-BOT_TOKEN = getenv("BOT_TOKEN", "https://telegra.ph/file/06e1f840ebbe0fb19f127.jpg")
+BOT_TOKEN = getenv("BOT_TOKEN", "6907624117:AAHIU98IN3gWgcCQYrlXjxTp7v2B4pmjr5s")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ihsantopic:topicihsan@cluster0.jfejxle.mongodb.net/?retryWrites=true&w=majority")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001983841726"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "Spotify Bot")
