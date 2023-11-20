@@ -1,12 +1,9 @@
 from config import LOG, LOG_GROUP_ID
 from YukkiMusic import app
-from YukkiMusic.utils.database.memorydatabase import (
-    get_active_chats, get_active_video_chats)
 from YukkiMusic.utils.database import is_on_off
 
+
 async def play_logs(message, streamtype):
-    aktifseslisayısı = len(await get_active_chats())
-    aktifvideosayısı = len(await get_active_video_chats())
     if await is_on_off(LOG):
         if message.chat.username:
             chatusername = f"@{message.chat.username}"
@@ -27,7 +24,6 @@ async def play_logs(message, streamtype):
                     f"{logger_text}",
                     disable_web_page_preview=True,
                 )
-                await app.set_chat_title(LOG_GROUP_ID, f"AKTİF SES - {aktifseslisayısı}")
             except:
                 pass
         return
