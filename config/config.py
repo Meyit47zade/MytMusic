@@ -11,21 +11,21 @@ API_ID = int(getenv("API_ID", "23368940"))
 API_HASH = getenv("API_HASH", "7ebdd2db1d108197b3f4f108c6dbac3c")
 BOT_TOKEN = getenv("BOT_TOKEN", "6818189349:AAEnUY6dN-dio4dGk132xfPW8AkL7hwJYNg")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ihsantopic:ihsanbot@cluster0.jfejxle.mongodb.net/?retryWrites=true&w=majority")
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002000798811"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "Yildiz Muzik Bot")
-OWNERS = int(getenv("OWNERS", "6811941116"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001986610474"))
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "🅼︎🆈︎🆃︎ 🅼︎🆄︎🆉︎🅸︎🅺︎🤖")
+OWNERS = int(getenv("OWNERS", "6772793255"))
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "6811941116").split())
+    map(int, getenv("OWNER_ID", "6772793255").split())
 )
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/MahmutAtes21/YildizMuzik",
+    "https://github.com/Meyit47/YildizMuzik",
 )
 KANAL = getenv(
-    "KANAL", "BotsDuyuru"
+    "KANAL", "S1F1RB1RKANAL"
 )
 GRUP = getenv(
-    "GRUP", "BotsDestek"
+    "GRUP", "S1F1RB1RCHAT"
 )
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "03052c5f8a324a58ad5cbb050b691d80")
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "2425bf87ba1f4a1fac3ae2e70eef2d39")
@@ -103,7 +103,7 @@ autoclean = []
 
 
 # Images
-START_IMG_URL = getenv("START_IMG_URL", None)
+START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/62bf42cce09fdf0dd5be9.mp4")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
