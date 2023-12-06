@@ -397,7 +397,7 @@ vidmode_2 : "Video Oynatma Modu, indirici olarak ayarlandı. Bot şimdi parçala
 vidmode_3 : "Video Oynatma Modu m3u8 olarak ayarlandı. Bot şimdi parçaları canlı olarak çalacak."
 
 #broadcast
-broad_1 : "**Bottan {1} Pinli {0} Sohbette Yayınlanan Mesaj.**"
+broad_1 : "**İşlem Başarılı .**"
 broad_2 : "Asistan Yayını Başlatıldı..."
 broad_3 : "**Yardımcı Yayın:**\n\n"
 broad_4 : "Asistan 1, {0} sohbette yayınlandı\n"
@@ -407,7 +407,7 @@ broad_7 : "Asistan 4, {0} sohbette yayınlandı\n"
 broad_8 : "Asistan 5, {0} sohbette yayınlandı\n"
 broad_9 : "**Kullanım**:\n/reklam [Mesaj] veya [Bir Mesajı Yanıtla]"
 broad_10 : "Lütfen yayınlamak için biraz metin sağlayın."
-broad_11 : "**{0} Kullanıcıya Yayınlanan Mesaj.**"
+broad_11 : "**İşlem Başarılı .**"
 
 #Heroku
 heroku_1 : "Please make sure your Heroku API Key, Your App name are configured correctly in the heroku"
