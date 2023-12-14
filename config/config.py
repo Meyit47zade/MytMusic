@@ -7,8 +7,8 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = int(getenv("API_ID", "2930013"))
-API_HASH = getenv("API_HASH", "7cab92dcd979add511b79d693775e17d")
+API_ID = int(getenv("API_ID", "28736869"))
+API_HASH = getenv("API_HASH", "258e1a4c3dc48e0c46ee7c8c927ac4a3)
 BOT_TOKEN = getenv("BOT_TOKEN", "6818189349:AAFMmwdRuE6uliUJ5WepxZXgHPtj_dWLxv0")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ihsantopic:ihsanbot@cluster0.jfejxle.mongodb.net/?retryWrites=true&w=majority")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001986610474"))
@@ -30,7 +30,7 @@ GRUP = getenv(
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "03052c5f8a324a58ad5cbb050b691d80")
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "2425bf87ba1f4a1fac3ae2e70eef2d39")
 
-STRING1 = getenv("STRING_SESSION", "BAAZQVz_-HzFL3PulV9WYhWmBCCjPI0Cwkl0ickpPtqTbe8c_QTvShP4Ui09yWM3f3_s2wLm_pAxBBfbivIZnZyFxwfKqlelRYVzIXjNdQIOFCvYHQc-3J6W4z0HI8BVHLPpgSNLcWQ4zTskWQxPN7QICoD3RqE9MjjKCIcifgD2OVpV3JacgUCgpIGY7YwWvsS2zN69OZ3FUvP8z5X1re8JXTfdcU45OcV_IkY43QUpDEtm_ExRaqN11a-B6Q0X0lQd5-cASJkgr9BUlDDYfclyUuzii3LJgTLdo9ryYucdAx8FwierS3xe9z8YwQ7AlLGYiyReAw2dUT3erHflQhHjAAAAAZOwn6cA")
+STRING1 = getenv("STRING_SESSION", "BAAGS_SIkPJtkvhuiD4XoHmu4W0kU2ms0woyAuWZsWNC0FaQUuajOwaxv82FxXJs3igNN94eHJdxqWeH8qNrXJd9S4HdfaLjx1ArMBb1suB302NRU8dCT-tgWchI12GRI9xBqEefcOaREWY9I1NL2wUV3EYa0h9-ACbb5eWvDrfQB0ZOeFjXFCRvFkAx28QX07KKyTbPiwUc-CZuyO82VJ1KkH3zdkCpefeyK-BVlGoVcpKIYSRrIJ0WyOw1z-Z-QWrMnQYgtTc053GdxOXDPIyZYZUicNpDEOlML07ldrHCOOCnKpNQ1RMpHlsfxDfn9_Cw6gVNnaI0RchgtMViq0plAAAAAYQPPxwA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
