@@ -13,9 +13,9 @@ BOT_TOKEN = getenv("BOT_TOKEN", "6818189349:AAFMmwdRuE6uliUJ5WepxZXgHPtj_dWLxv0"
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ihsantopic:ihsanbot@cluster0.jfejxle.mongodb.net/?retryWrites=true&w=majority")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001986610474"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "MytMuzik")
-OWNERS = int(getenv("OWNERS", "6510559004"))
+OWNERS = int(getenv("OWNERS", "1527476177"))
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "6510559004").split())
+    map(int, getenv("OWNER_ID", "1527476177").split())
 )
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
