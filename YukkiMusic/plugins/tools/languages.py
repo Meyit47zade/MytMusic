@@ -34,6 +34,13 @@ def lanuages_keyboard(_):
             text="🇦🇿 Azerbaycan",
             callback_data=f"languages:az",
         ),
+def lanuages_keyboard(_):
+    keyboard = InlineKeyboard(row_width=2)
+    keyboard.row(
+  InlineKeyboardButton(
+            text="🇦🇿 Azerbaycan",
+            callback_data=f"languages:az",
+        ),
     keyboard.row(
         InlineKeyboardButton(
             text=_["BACK_BUTTON"],
