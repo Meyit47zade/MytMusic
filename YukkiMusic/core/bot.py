@@ -20,7 +20,7 @@ from ..logging import LOGGER
 class YukkiBot(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot")
-        super().__init__(
+        Yukki().__init__(
             "YukkiMusicBot",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
@@ -28,7 +28,7 @@ class YukkiBot(Client):
         )
 
     async def start(self):
-        await super().start()
+        await Yukki().start()
         get_me = await self.get_me()
         self.username = get_me.username
         self.id = get_me.id
