@@ -17,7 +17,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS
 from YukkiMusic import LOGGER, app, userbot
-from YukkiMusic.core.call import Yukki
+from YukkiMusic.core.call import YukkiBot
 from YukkiMusic.plugins import ALL_MODULES
 from YukkiMusic.utils.database import get_banned_users, get_gbanned
 
@@ -59,7 +59,7 @@ async def init():
         "Successfully Imported Modules "
     )
     await userbot.start()
-    await Yukki.start()
+    await YukkiBot.start()
     try:
         await Yukki.stream_call(
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
