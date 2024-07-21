@@ -11,7 +11,7 @@ API_ID = int(getenv("API_ID", 28736869))
 API_HASH = getenv("API_HASH", "258e1a4c3dc48e0c46ee7c8c927ac4a3")
 BOT_TOKEN = getenv("BOT_TOKEN", "6904551522:AAH9TXT-72JQgsiUpdo-uXggXLASpZL4Y0o")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://mongoguess:guessmongo@cluster0.zcwklzz.mongodb.net/?retryWrites=true&w=majority")
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", -1002244663689))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002244663689"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "MytGrup")
 OWNERS = int(getenv("OWNERS", 6510559004))
 OWNER_ID = list(
